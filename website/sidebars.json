@@ -1,0 +1,41 @@
+{
+  "docs": {
+    "Tutorials": [
+      "tutorials/overview",
+      "tutorials/createEquivalenceClassTable",
+      "tutorials/transform2dataGenerator",
+      "tutorials/introduceSections",
+      "tutorials/createGenerator",
+      "tutorials/createWriter",
+      "tutorials/createFilterProcessor"
+    ],
+    "Guides": [
+      {
+        "type": "subcategory",
+        "label": "Equivalence class table",
+        "ids": [
+          "guide/equivalence/overview",
+          "guide/equivalence/sections"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Matrix table",
+        "ids": [
+          "guide/matrix/overview"
+        ]
+      },
+      {
+        "type": "subcategory",
+        "label": "Advanced",
+        "ids": [
+          "guide/advanced/references",
+          "guide/advanced/instanceIds"
+        ]
+      }
+    ],
+    "API": [
+      "doc3"
+    ]
+  }
+}
