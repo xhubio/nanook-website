@@ -25,7 +25,7 @@ The next sections describe the format of the table to make it parseable.
 
 # Layout Equivalence Class Table
 
-![Example table](images/model-decision/table.jpg)
+![Example table](/img/model-decision/table.jpg)
 
 This image shows an example of an equivalence class table.
 The column order is important. The first five columns are fix. In the
@@ -35,7 +35,7 @@ add an empty column in your table the parser will stop there.
 
 The table is divided into a few sections.
 
-![Test case side](images/model-decision/table_testcases.jpg)
+![Test case side](/img/model-decision/table_testcases.jpg)
 
 The right side shows the test cases. Each column on the right side is one
 test case. The column header of a test case is the name of this test case.
@@ -51,7 +51,7 @@ which is directly manipulated in the test. But this is just a name. You can have
 The field section describes the variety of data needed by the test. And therefore the amount of tests
 to be created.
 
-![Field sub section](images/model-decision/table_field_sub_section.jpg)
+![Field sub section](/img/model-decision/table_field_sub_section.jpg)
 
 A sub section in this case is one field and all the equivalence classes for this field.
 An equivalence class defines the different kinds of field values with an equivalent behaviour.
@@ -63,7 +63,7 @@ to test with 11, 12, 13, …​ characters. The equivalence class is 'more than 
 One fieldSection may have many fieldSubSections. The FieldSection groups fields together. If you have one or many
 fieldSections has no impact on the table itself. All the fieldSubSections have to be combined.
 
-![Multi row section](images/model-decision/table_multi_row_section.jpg)
+![Multi row section](/img/model-decision/table_multi_row_section.jpg)
 
 The multi row sections can be used to describe the expected results or error messages. It is free to the user
 how many of these sections are in the table. It can also contain actions on the UI or other information needed.
@@ -135,7 +135,7 @@ Just add 'TC1' or any other name you like.
 
   - Last but not least, add some colour to the table.
 
-![step2](images/tutorials/t2/step2.png)
+![step2](/img/tutorials/t2/step2.png)
 
 # Create a project for creating the data
 
@@ -287,7 +287,7 @@ are changing with each call of the script. In the next section we replace the st
 First of all we need to update the Excel sheet to use the
 new generator.
 
-![step4](images/tutorials/t2/step4.png)
+![step4](/img/tutorials/t2/step4.png)
 
 As you can see in the image we added two new 'FieldSubSection'. Also three more
 test cases are added just to make it more interesting.
@@ -414,7 +414,7 @@ Now let’s have a look at the generated result.
 In the 'tdg' sub folder are four sub directories 'TC1' to 'TC4'.
 For each test case one folder was created.
 
-![step4.1](images/tutorials/t2/step4.1.png)
+![step4.1](/img/tutorials/t2/step4.1.png)
 
 Open one of the generated JSON files in one of the folders.
 The result should look like this.

@@ -64,7 +64,7 @@ The following fields should be entered in the first column.
 
 The sheet should look similar to this:
 
-![step1](images/tutorials/t1/step1.png)
+![step1](/img/tutorials/t1/step1.png)
 
 # Fill the equivalence class data
 
@@ -181,7 +181,7 @@ Let’s start with the user id.
 
 Now the table should look like this:
 
-![step2](images/tutorials/t1/step2.png)
+![step2](/img/tutorials/t1/step2.png)
 
 Also note the added header row.
 
@@ -205,12 +205,12 @@ benefit of the equivalence class table technique.
 
 First we will add some formulas to the spreadsheet to do the calculations.
 
-![step3 formula](images/tutorials/t1/step3_formula.png)
+![step3 formula](/img/tutorials/t1/step3_formula.png)
 
 The numbers count the amount of classes in each field. Do this for each of the fields.
 And also add a row at the end which shows the result of the multiplication.
 
-![step3 format](images/tutorials/t1/step3_format.png)
+![step3 format](/img/tutorials/t1/step3_format.png)
 
 As you can see in the picture there are also some colours added to the rows.
 At the right side we added four new columns with the names 1, 2, 3 and 4.
@@ -264,7 +264,7 @@ You can do the same pattern for all the cases where a value in 'userId' causes
 an error. In each of these cases the value entered in the password fields
 is not relevant.
 
-![step4](images/tutorials/t1/step4.png)
+![step4](/img/tutorials/t1/step4.png)
 
 In column 'C' in row '47' we can see that these 11 test cases are covering
 1716 cases. The goal of the table is to get a coverage of 100%. We need to add
@@ -286,7 +286,7 @@ Add the following rows
         Error   The UserId must not exceed the length of 30 characters
         Error   The UserId must not contain white space characters
 
-![step5 resultRows](images/tutorials/t1/step5_resultRows.png)
+![step5 resultRows](/img/tutorials/t1/step5_resultRows.png)
 
 The result section is not necessary to fill the equivalence class
 table, but it is a possibility to define the expected error messages
@@ -294,7 +294,7 @@ for the application. It has also a documentation purpose.
 
 For each test case we can now specify the expected behaviour.
 
-![step5 withResuts](images/tutorials/t1/step5_withResuts.png)
+![step5 withResuts](/img/tutorials/t1/step5_withResuts.png)
 
 # Cleanup the table
 
@@ -306,7 +306,7 @@ In our case we started with the invalid user ids. But in the rows
 It makes sense to reorder the equivalence classes so that the fields representing
 valid cases are at the end of the table.
 
-![step6](images/tutorials/t1/step6.png)
+![step6](/img/tutorials/t1/step6.png)
 
 Also more descriptions are added in order to make clear that these are valid cases.
 
@@ -322,13 +322,13 @@ field we can fill the 'password2' field with 'e'.
 
 And then add a new result row with the expected error messages.
 
-![step6 tc12](images/tutorials/t1/step6_tc12.png)
+![step6 tc12](/img/tutorials/t1/step6_tc12.png)
 
 In the table you can now use the same logic for 'password' as we have done
 for 'userId' before. So fill up the next test cases for all the error cases of
 'password'.
 
-![step6 tc12 22](images/tutorials/t1/step6_tc12-22.png)
+![step6 tc12 22](/img/tutorials/t1/step6_tc12-22.png)
 
 # Iterate over the 'password2' field
 
@@ -342,7 +342,7 @@ cases of 'password2'
 
 Now the table should look like this:
 
-![step7](images/tutorials/t1/step7.png)
+![step7](/img/tutorials/t1/step7.png)
 
 We also added a new error message for the case where the passwords are different.
 When adding new test cases remember to update the formula for summarizing
@@ -364,7 +364,7 @@ of valid cases. One of them we have used for the error cases of 'password' and
     change the equivalence class for the 'userId' so that all cases are covered.
     This results in 131 test cases.
 
-![step8 2](images/tutorials/t1/step8_2.png)
+![step8 2](/img/tutorials/t1/step8_2.png)
 
 The picture gives an idea of how this looks like.
 
@@ -372,4 +372,4 @@ To optimise the testing procedure we should consider not to iterate over all of 
 and 'password2'. We can just take any valid userId instead. For this we fill all the cells of the rows 15-19
 with the test cases 12-34 with an 'e'. Then we only iterate the valid cases. This results in 39 test cases.
 
-![step8 3](images/tutorials/t1/step8_3.png)
+![step8 3](/img/tutorials/t1/step8_3.png)
