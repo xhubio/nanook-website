@@ -5,9 +5,6 @@ sidebar_label: Create an equivalence class table
 ---
 
 
-
-# Create an equivalence class table from scratch
-
 This tutorial teaches you how to create an equivalence class table from scratch.
 It does not yet use any test data creation functionality.
 
@@ -51,7 +48,7 @@ The password has to meet the following requirements:
 
 The second password has the same requirements as the first password field with one more restriction:
 
--   The password must equal the first password
+  - The password must equal the first password
 
 # Create an initial table
 
@@ -67,123 +64,124 @@ The following fields should be entered in the first column.
 
 The sheet should look similar to this:
 
-![step1](/img/tutorials/t1/step1.png)
+![step1](images/tutorials/t1/step1.png)
 
 # Fill the equivalence class data
 
 For each field we need to create the equivalence classes.
 This is a value to which the application behaves equivalent to.
 
-Example 'too many characters'  
-The application reacts in the same way if there is one character too much or if there are 20 characters too much.
+  - Example 'too many characters'  
+    The application reacts in the same way if there is one character too much or if there are 20 characters too much.
 
 To get these values you need to read the specification and extract the classes from it.
 All the classes should be added to the spread sheet in the second column under the field it belongs to.
 In the third column we have the possibility to enter a description for the class.
 Let’s start with the user id.
 
-userID equivalence classes  
--   empty  
-    No values entered at all.
+  - userID equivalence classes
+    
+      - empty  
+        No values entered at all.
+    
+      - too short  
+        The spec says: 'The id must have a minimum length of two characters.'
+    
+      - too long  
+        The id must not exceed 30 characters
+    
+      - id with space  
+        The spec says: 'The user id must not contain a space' so we need to create an id containing a space.
+    
+      - leading space  
+        An id with leading space or spaces. As the id will be trimmed we also should consider a too short ID with leading
+        space. We expect that the application checks the length after trimming.
+    
+      - too short but with leading space or spaces
+    
+      - trailing space or spaces
+    
+      - too short but with trailing space or spaces
+    
+      - not too long but leading Spaces  
+        The user id without the spaces matches the max length constraint.
+    
+      - not too long but trailing spaces
+    
+      - invalid chars  
+        Spec: 'Only ascii characters are allowed (a-z) and also numbers, hyphen, and underscore'.
+    
+      - existing userId  
+        spec: 'The id must not exist.'
+    
+      - existing userId different case  
+        spec: 'The user name is case insensitive.'
+    
+      - valid user id  
+        Finally we need a valid user Id.
 
--   too short  
-    The spec says: 'The id must have a minimum length of two characters.'
+  - password equivalence classes  
+    Some of the classes can be copied more or less from the user id field.
+    
+      - empty
+    
+      - too short
+    
+      - too long
+    
+      - with leading space  
+        In this case the application will not trim the spaces since they are not allowed.
+    
+      - with trailing space  
+    
+      - starts with the userId
+    
+      - ends with the userId
+    
+      - missing uppercase letter
+    
+      - missing lower case letter
+    
+      - missing special character
+    
+      - missing number
+    
+      - valid password
 
--   too long  
-    The id must not exceed 30 characters
-
--   id with space  
-    The spec says: 'The user id must not contain a space' so we need to create an id containing a space.
-
--   leading space  
-    An id with leading space or spaces. As the id will be trimmed we also should consider a too short ID with leading
-    space. We expect that the application checks the length after trimming.
-
--   too short but with leading space or spaces
-
--   trailing space or spaces
-
--   too short but with trailing space or spaces
-
--   not too long but leading Spaces  
-    The user id without the spaces matches the max length constraint.
-
--   not too long but trailing spaces
-
--   invalid chars  
-    Spec: 'Only ascii characters are allowed (a-z) and also numbers, hyphen, and underscore'.
-
--   existing userId  
-    spec: 'The id must not exist.'
-
--   existing userId different case  
-    spec: 'The user name is case insensitive.'
-
--   valid user id  
-    Finally we need a valid user Id.
-
-password equivalence classes  
-Some of the classes can be copied more or less from the user id field.
-
--   empty
-
--   too short
-
--   too long
-
--   with leading space  
-    In this case the application will not trim the spaces since they are not allowed.
-
--   with trailing space  
-
--   starts with the userId
-
--   ends with the userId
-
--   missing uppercase letter
-
--   missing lower case letter
-
--   missing special character
-
--   missing number
-
--   valid password
-
-password2 equivalence classes  
-In this case we can copy all the classes from the first password field and
-add some additional classes.
-
--   empty
-
--   too short
-
--   too long
-
--   with leading space  
-    In this case the application will not trim the spaces since they are not allowed.
-
--   with trailing space  
-
--   starts with the userId
-
--   ends with the userId
-
--   missing uppercase letter
-
--   missing lower case letter
-
--   missing special character
-
--   missing number
-
--   valid password
-
--   valid password but different to the first password
+  - password2 equivalence classes  
+    In this case we can copy all the classes from the first password field and
+    add some additional classes.
+    
+      - empty
+    
+      - too short
+    
+      - too long
+    
+      - with leading space  
+        In this case the application will not trim the spaces since they are not allowed.
+    
+      - with trailing space  
+    
+      - starts with the userId
+    
+      - ends with the userId
+    
+      - missing uppercase letter
+    
+      - missing lower case letter
+    
+      - missing special character
+    
+      - missing number
+    
+      - valid password
+    
+      - valid password but different to the first password
 
 Now the table should look like this:
 
-![step2](/img/tutorials/t1/step2.png)
+![step2](images/tutorials/t1/step2.png)
 
 Also note the added header row.
 
@@ -194,11 +192,11 @@ calculate how many test cases are necessary to test this functionality.
 
 In order to do so we multiply the number of equivalence classes of each field.
 
--   userid has 16 classes
+  - userid has 16 classes
 
--   password has 12 classes
+  - password has 12 classes
 
--   password2 has 13 classes
+  - password2 has 13 classes
 
 So the number of test cases is 16\*12\*13 = 2496.
 This is a lot to test. Could this be optimised? If yes, how
@@ -207,12 +205,12 @@ benefit of the equivalence class table technique.
 
 First we will add some formulas to the spreadsheet to do the calculations.
 
-![step3 formula](/img/tutorials/t1/step3_formula.png)
+![step3 formula](images/tutorials/t1/step3_formula.png)
 
 The numbers count the amount of classes in each field. Do this for each of the fields.
 And also add a row at the end which shows the result of the multiplication.
 
-![step3 format](/img/tutorials/t1/step3_format.png)
+![step3 format](images/tutorials/t1/step3_format.png)
 
 As you can see in the picture there are also some colours added to the rows.
 At the right side we added four new columns with the names 1, 2, 3 and 4.
@@ -243,11 +241,11 @@ So let’s enter this information into the table.
 Enter for all the classes of field 'password' and for 'password2' an 'e'.
 
 > **Note**
->
-> -   'x' means to choose exactly this equivalence class of this field.
->
-> -   'e' means choose any of the equivalence classes for this field.
->
+> 
+>   - 'x' means to choose exactly this equivalence class of this field.
+> 
+>   - 'e' means choose any of the equivalence classes for this field.
+
 The result is shown in the last row named 'Summary'. There we can see
 '156'. So this test case eliminates 156 test cases of the total possible number of '2496'.
 
@@ -266,7 +264,7 @@ You can do the same pattern for all the cases where a value in 'userId' causes
 an error. In each of these cases the value entered in the password fields
 is not relevant.
 
-![step4](/img/tutorials/t1/step4.png)
+![step4](images/tutorials/t1/step4.png)
 
 In column 'C' in row '47' we can see that these 11 test cases are covering
 1716 cases. The goal of the table is to get a coverage of 100%. We need to add
@@ -288,7 +286,7 @@ Add the following rows
         Error   The UserId must not exceed the length of 30 characters
         Error   The UserId must not contain white space characters
 
-![step5 resultRows](/img/tutorials/t1/step5_resultRows.png)
+![step5 resultRows](images/tutorials/t1/step5_resultRows.png)
 
 The result section is not necessary to fill the equivalence class
 table, but it is a possibility to define the expected error messages
@@ -296,7 +294,7 @@ for the application. It has also a documentation purpose.
 
 For each test case we can now specify the expected behaviour.
 
-![step5 withResuts](/img/tutorials/t1/step5_withResuts.png)
+![step5 withResuts](images/tutorials/t1/step5_withResuts.png)
 
 # Cleanup the table
 
@@ -308,7 +306,7 @@ In our case we started with the invalid user ids. But in the rows
 It makes sense to reorder the equivalence classes so that the fields representing
 valid cases are at the end of the table.
 
-![step6](/img/tutorials/t1/step6.png)
+![step6](images/tutorials/t1/step6.png)
 
 Also more descriptions are added in order to make clear that these are valid cases.
 
@@ -324,13 +322,13 @@ field we can fill the 'password2' field with 'e'.
 
 And then add a new result row with the expected error messages.
 
-![step6 tc12](/img/tutorials/t1/step6_tc12.png)
+![step6 tc12](images/tutorials/t1/step6_tc12.png)
 
 In the table you can now use the same logic for 'password' as we have done
 for 'userId' before. So fill up the next test cases for all the error cases of
 'password'.
 
-![step6 tc12 22](/img/tutorials/t1/step6_tc12-22.png)
+![step6 tc12 22](images/tutorials/t1/step6_tc12-22.png)
 
 # Iterate over the 'password2' field
 
@@ -344,7 +342,7 @@ cases of 'password2'
 
 Now the table should look like this:
 
-![step7](/img/tutorials/t1/step7.png)
+![step7](images/tutorials/t1/step7.png)
 
 We also added a new error message for the case where the passwords are different.
 When adding new test cases remember to update the formula for summarizing
@@ -366,7 +364,7 @@ of valid cases. One of them we have used for the error cases of 'password' and
     change the equivalence class for the 'userId' so that all cases are covered.
     This results in 131 test cases.
 
-![step8 2](/img/tutorials/t1/step8_2.png)
+![step8 2](images/tutorials/t1/step8_2.png)
 
 The picture gives an idea of how this looks like.
 
@@ -374,4 +372,4 @@ To optimise the testing procedure we should consider not to iterate over all of 
 and 'password2'. We can just take any valid userId instead. For this we fill all the cells of the rows 15-19
 with the test cases 12-34 with an 'e'. Then we only iterate the valid cases. This results in 39 test cases.
 
-![step8 3](/img/tutorials/t1/step8_3.png)
+![step8 3](images/tutorials/t1/step8_3.png)
