@@ -18,7 +18,7 @@ const users = [
   },
   {
     caption: 'Weltprofolio',
-    image: '/img/users/LogoWeltprotfolio.png',
+    image: '/img/users/LogoWeltportfolio.png',
     infoLink: 'https://Weltportfolio.net',
     pinned: true,
   },
