@@ -13,6 +13,25 @@ const MarkdownBlock = CompLibrary.MarkdownBlock; /* Used to read markdown */
 const Container = CompLibrary.Container;
 const GridBlock = CompLibrary.GridBlock;
 
+
+class Button extends React.Component {
+  render() {
+    return (
+      <a
+        className="big-button"
+        href={this.props.href}
+        target={this.props.target}>
+        {this.props.children}
+      </a>
+    );
+  }
+}
+class Hero extends React.Component {
+  render() {
+    return <div className="hero">{this.props.children}</div>;
+  }
+}
+
 class HomeSplash extends React.Component {
   render() {
     const {siteConfig, language = ''} = this.props;
@@ -24,6 +43,7 @@ class HomeSplash extends React.Component {
     const SplashContainer = props => (
       <div className="homeContainer">
         <div className="homeSplashFade">
+          <Logo img_src={`${baseUrl}img/nanook.svg`} />
           <div className="wrapper homeWrapper">{props.children}</div>
         </div>
       </div>
@@ -60,13 +80,13 @@ class HomeSplash extends React.Component {
 
     return (
       <SplashContainer>
-        <Logo img_src={`${baseUrl}img/docusaurus.svg`} />
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
+          <div className="minitext">Combine the Power of equivalence class tables and data generators</div>
           <PromoSection>
             <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html')}>Example Link</Button>
-            <Button href={docUrl('doc2.html')}>Example Link 2</Button>
+            <Button href={docUrl('doc1.html')}>Get Started Guides</Button>
+            <Button href={docUrl('doc2.html')}>Nanook Integrations</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -142,19 +162,26 @@ class Index extends React.Component {
     );
 
     const Features = () => (
-      <Block layout="fourColumn">
+      <Block layout="fourColumn" 
+      background="light">
         {[
           {
-            content: 'This is the content of my feature',
-            image: `${baseUrl}img/docusaurus.svg`,
+            content: 'Define, Document and Optimize your test cases.',
+            image: `${baseUrl}img/file-signature.svg`,
             imageAlign: 'top',
-            title: 'Feature One',
+            title: 'Equivalent class tables',
           },
           {
-            content: 'The content of my second feature',
-            image: `${baseUrl}img/docusaurus.svg`,
+            content: 'Enrich the tables with generator calls and generate your data as needed. Export the data in any format you need. The generators and exporters are fully customisable.',
+            image: `${baseUrl}img/fa-cogs.svg`,
             imageAlign: 'top',
-            title: 'Feature Two',
+            title: 'Test data generation',
+          },
+          {
+            content: 'All your testing apps, tools and platforms, are easy to integrate with Nanook',
+            image: `${baseUrl}img/fa-flag.svg`,
+            imageAlign: 'top',
+            title: 'Integrate Faster',
           },
         ]}
       </Block>
@@ -194,10 +221,6 @@ class Index extends React.Component {
         <HomeSplash siteConfig={siteConfig} language={language} />
         <div className="mainContainer">
           <Features />
-          <FeatureCallout />
-          <LearnHow />
-          <TryOut />
-          <Description />
           <Showcase />
         </div>
       </div>
@@ -206,3 +229,15 @@ class Index extends React.Component {
 }
 
 module.exports = Index;
+
+
+/*
+<Features />
+          <FeatureCallout />
+          <LearnHow />
+          <TryOut />
+          <Description />
+          <Showcase />
+
+background="light"
+*/
