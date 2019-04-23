@@ -43,26 +43,16 @@ class Footer extends React.Component {
             <a href={this.docUrl('guide/equivalence/overview.html')}>
               Guide
             </a>
-            <a href={this.docUrl('api/overview.html')}>
-              API Reference
-            </a>
           </div>
           <div>
             <h5>Community</h5>
             <a href={this.pageUrl('users.html', this.props.language)}>
               User Showcase
             </a>
-            <a
-              href="http://stackoverflow.com/questions/tagged/"
-              target="_blank"
-              rel="noreferrer noopener">
-              Stack Overflow
-            </a>
           </div>
           <div>
             <h5>More</h5>
             <a href={`${this.props.config.baseUrl}imprint`}>Imprint</a>
-            <a href={`${this.props.config.baseUrl}blog`}>Blog</a>
             <a href="https://github.com/xhubio/nanook-table/">GitHub</a>
             <a
               className="github-button"
