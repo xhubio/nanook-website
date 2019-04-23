@@ -19,7 +19,7 @@ const users = [
   {
     caption: 'Weltprofolio',
     image: '/img/users/LogoWeltprotfolio.png',
-    infoLink: 'https://Weltprofolio.net',
+    infoLink: 'https://Weltportfolio.net',
     pinned: true,
   },
   {

@@ -85,8 +85,8 @@ class HomeSplash extends React.Component {
           <div className="minitext">Combine the Power of equivalence class tables and data generators</div>
           <PromoSection>
             <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('doc1.html')}>Get Started Guides</Button>
-            <Button href={docUrl('doc2.html')}>Nanook Integrations</Button>
+            <Button href={docUrl('tutorials/overview.html')}>Get Started Guides</Button>
+            <Button href={docUrl('tutorials/overview.html')}>Nanook Integrations</Button>
           </PromoSection>
         </div>
       </SplashContainer>
@@ -162,7 +162,7 @@ class Index extends React.Component {
     );
 
     const Features = () => (
-      <Block layout="fourColumn" 
+      <Block layout="fourColumn"
       background="light">
         {[
           {
