@@ -9,6 +9,7 @@
       "tutorials/createFilterProcessor"
     ],
     "Guides": [
+      "guide/generalOverview",
       {
         "type": "subcategory",
         "label": "Equivalence class table",
@@ -26,15 +27,27 @@
       },
       {
         "type": "subcategory",
+        "label": "Generator commands",
+        "ids": [
+          "guide/generatrorCommand/static",
+          "guide/generatrorCommand/generator",
+          "guide/generatrorCommand/reference"
+        ]
+      },
+      {
+        "type": "subcategory",
         "label": "Advanced",
         "ids": [
-          "guide/advanced/references",
           "guide/advanced/instanceIds"
         ]
       }
     ],
-    "API": [
-      "api/overview"
+    "Modules": [
+      "modules/model",
+      "modules/logger",
+      "modules/fileProcessor",
+      "modules/dataGenerator",
+      "modules/writer"
     ]
   }
 }
