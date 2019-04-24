@@ -4,7 +4,6 @@
       "tutorials/overview",
       "tutorials/createEquivalenceClassTable",
       "tutorials/transform2dataGenerator",
-      "tutorials/introduceSections",
       "tutorials/createGenerator",
       "tutorials/createWriter",
       "tutorials/createFilterProcessor"
