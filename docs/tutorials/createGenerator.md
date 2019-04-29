@@ -32,7 +32,7 @@ Create a new file called /src/GeneratorPerson.js. The generator
 extends the 'DataGeneratorBase' class.
 
 ``` js
-const DataGeneratorBase = require('@xhubiotable/data-generator').DataGeneratorBase
+const DataGeneratorBase = require('@xhubio/nanook-table').DataGeneratorBase
 
 class GeneratorPerson extends DataGeneratorBase {
 

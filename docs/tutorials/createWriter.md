@@ -14,12 +14,12 @@ like to retest only some of the tests. So I recommend to split the data per test
 
 # Create the writer
 
-First let’s have a look at the default writer provided by the '@xhubiotable/processor' module.
+First let’s have a look at the default writer provided by the '@xhubio/nanook-table' module.
 
 ``` js
 const fs = requite('fs')
 const util = requite('util')
-const InterfaceWriter = requite('@xhubiotable/processor').InterfaceWriter
+const InterfaceWriter = requite('@xhubio/nanook-table').InterfaceWriter
 const writeFile = util.promisify(fs.writeFile)
 
 class DefaultWriter extends InterfaceWriter {
@@ -64,7 +64,7 @@ Create a file called 'csvWriter.js' and add the following content.
 const fs = require('fs')
 const util = require('util')
 const path = require('path')
-const InterfaceWriter = require('@xhubiotable/processor').InterfaceWriter
+const InterfaceWriter = require('@xhubio/nanook-table').InterfaceWriter
 
 const writeFile = util.promisify(fs.writeFile)
 const DELIMITER = ','     
@@ -125,8 +125,8 @@ The next step is adding the writer to the processor. For this the 'tdg.js' file 
 
 ``` js
 const path = require('path')
-const p = require('@xhubiotable/processor')
-const LoggerMemory = require('@xhubiotable/logger').LoggerMemory
+const p = require('@xhubio/nanook-table')
+const LoggerMemory = require('@xhubio/nanook-table').LoggerMemory
 const GeneratorPerson = require('./GeneratorPerson').GeneratorPerson
 const CsvWriter = require('./CsvWriter').CsvWriter
                       

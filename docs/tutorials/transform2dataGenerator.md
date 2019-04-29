@@ -150,7 +150,7 @@ mkdir resources
 mkdir tdg
 mkdir src
 npm init
-npm install --save @xhubiotable/processor
+npm install --save @xhubio/nanook-table
 ```
 
 ## Create the script to call the processor
@@ -159,8 +159,8 @@ Create a new file 'src/tdg.js' with the following content.
 
 ``` js
 const path = require('path')
-const p = require('@xhubiotable/processor')
-const { LoggerMemory } = require('@xhubiotable/logger')
+const p = require('@xhubio/nanook-table')
+const { LoggerMemory } = require('@xhubio/nanook-table')
 
 async function doIt() {
   const logger = new LoggerMemory()               
