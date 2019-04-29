@@ -64,39 +64,27 @@
         "ids": [
           "api/model/TableInterface",
           "api/model/TestcaseDefinitionInterface",
-          {
-            "type": "subcategory",
-            "label": "Todo",
-            "ids": [
-              "api/model/todo/TodoMeta",
-              "api/model/todo/TodoStatic",
-              "api/model/todo/TodoGenerator",
-              "api/model/todo/TodoReference"
-            ]
-          }
+          "api/model/todo/TodoMeta",
+          "api/model/todo/TodoStatic",
+          "api/model/todo/TodoGenerator",
+          "api/model/todo/TodoReference"
         ]
       },
       {
         "type": "subcategory",
         "label": "Model Decision",
         "ids": [
-          {
-            "type": "subcategory",
-            "label": "Sections",
-            "ids": [
-              "api/model-decision/sections/BaseSectionDefinition",
-              "api/model-decision/sections/BaseSingleRowSectionDefinition",
-              "api/model-decision/sections/ExecuteSectionDefinition",
-              "api/model-decision/sections/NeverExecuteSectionDefinition",
-              "api/model-decision/sections/MultiplicitySectionDefinition",
-              "api/model-decision/sections/SummarySectionDefinition",
-              "api/model-decision/sections/FieldSectionDefinition",
-              "api/model-decision/sections/FieldSubSectionDefinition",
-              "api/model-decision/sections/MultiRowSectionDefinition",
-              "api/model-decision/sections/TagSectionDefinition",
-              "api/model-decision/sections/FilterSectionDefinition"
-            ]
-          },
+          "api/model-decision/sections/BaseSectionDefinition",
+          "api/model-decision/sections/BaseSingleRowSectionDefinition",
+          "api/model-decision/sections/ExecuteSectionDefinition",
+          "api/model-decision/sections/NeverExecuteSectionDefinition",
+          "api/model-decision/sections/MultiplicitySectionDefinition",
+          "api/model-decision/sections/SummarySectionDefinition",
+          "api/model-decision/sections/FieldSectionDefinition",
+          "api/model-decision/sections/FieldSubSectionDefinition",
+          "api/model-decision/sections/MultiRowSectionDefinition",
+          "api/model-decision/sections/TagSectionDefinition",
+          "api/model-decision/sections/FilterSectionDefinition",
           "api/model-decision/TestcaseDefinitionDecision",
           "api/model-decision/TableDecision",
           "api/model-decision/sectionTypes",
@@ -128,31 +116,13 @@
           "api/file-processor/ParserInterface",
           "api/file-processor/FileProcessor",
           "api/file-processor/FileProcessor",
-          {
-            "type": "subcategory",
-            "label": "Decision",
-            "ids": [
-              "api/file-processor/decision/ParserDecisionConstants",
-              "api/file-processor/decision/ParserDecision"
-            ]
-          },
-          {
-            "type": "subcategory",
-            "label": "Matrix",
-            "ids": [
-              "api/file-processor/matrix/ParserMatrixConstants",
-              "api/file-processor/matrix/ParserMatrix"
-            ]
-          },
-          {
-            "type": "subcategory",
-            "label": "Specification",
-            "ids": [
-              "api/file-processor/specification/ParserSpecificationConstants",
-              "api/file-processor/specification/ParserSpecification",
-              "api/file-processor/specification/ParserSpecificationConverter"
-            ]
-          }
+          "api/file-processor/decision/ParserDecisionConstants",
+          "api/file-processor/decision/ParserDecision",
+          "api/file-processor/matrix/ParserMatrixConstants",
+          "api/file-processor/matrix/ParserMatrix",
+          "api/file-processor/specification/ParserSpecificationConstants",
+          "api/file-processor/specification/ParserSpecification",
+          "api/file-processor/specification/ParserSpecificationConverter"
         ]
       },
       {
