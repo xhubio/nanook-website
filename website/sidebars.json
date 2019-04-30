@@ -48,111 +48,79 @@
       "modules/fileProcessor",
       "modules/dataGenerator",
       "modules/writer"
+    ]
+  },
+  "API": {
+    "Logger": [
+      "api/logger/LoggerInterface",
+      "api/logger/LoggerMemory"
     ],
-    "API": [
-      {
-        "type": "subcategory",
-        "label": "Logger",
-        "ids": [
-          "api/logger/LoggerInterface",
-          "api/logger/LoggerMemory"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Model",
-        "ids": [
-          "api/model/TableInterface",
-          "api/model/TestcaseDefinitionInterface",
-          "api/model/todo/TodoMeta",
-          "api/model/todo/TodoStatic",
-          "api/model/todo/TodoGenerator",
-          "api/model/todo/TodoReference"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Model Decision",
-        "ids": [
-          "api/model-decision/sections/BaseSectionDefinition",
-          "api/model-decision/sections/BaseSingleRowSectionDefinition",
-          "api/model-decision/sections/ExecuteSectionDefinition",
-          "api/model-decision/sections/NeverExecuteSectionDefinition",
-          "api/model-decision/sections/MultiplicitySectionDefinition",
-          "api/model-decision/sections/SummarySectionDefinition",
-          "api/model-decision/sections/FieldSectionDefinition",
-          "api/model-decision/sections/FieldSubSectionDefinition",
-          "api/model-decision/sections/MultiRowSectionDefinition",
-          "api/model-decision/sections/TagSectionDefinition",
-          "api/model-decision/sections/FilterSectionDefinition",
-          "api/model-decision/TestcaseDefinitionDecision",
-          "api/model-decision/TableDecision",
-          "api/model-decision/sectionTypes",
-          "api/model-decision/functions/ValidateDouble",
-          "api/model-decision/functions/ValidateHelper",
-          "api/model-decision/functions/ValidateMissing"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Model Matrix",
-        "ids": [
-          "api/model-matrix/TestcaseDefinitionMatrix",
-          "api/model-matrix/TableMatrix"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Importer xlsx",
-        "ids": [
-          "api/importerXlsx/ImporterXlsx"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "File Processor",
-        "ids": [
-          "api/file-processor/ImporterInterface",
-          "api/file-processor/ParserInterface",
-          "api/processor/filter/FilterProcessorInterface",
-          "api/processor/filter/SimpleArrayFilterProcessor",
-          "api/processor/filter/SimpleArrayIgnoreFilterProcessor",
-          "api/file-processor/FileProcessor",
-          "api/file-processor/FileProcessor",
-          "api/file-processor/decision/ParserDecisionConstants",
-          "api/file-processor/decision/ParserDecision",
-          "api/file-processor/matrix/ParserMatrixConstants",
-          "api/file-processor/matrix/ParserMatrix",
-          "api/file-processor/specification/ParserSpecificationConstants",
-          "api/file-processor/specification/ParserSpecification",
-          "api/file-processor/specification/ParserSpecificationConverter"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Data Generator",
-        "ids": [
-          "api/dataGenerator/DataGeneratorInterface",
-          "api/dataGenerator/DataGeneratorBase",
-          "api/dataGenerator/TDGServiceRegistry",
-          "api/dataGenerator/GeneratorFaker"
-        ]
-      },
-      {
-        "type": "subcategory",
-        "label": "Processor",
-        "ids": [
-          "api/processor/InterfaceProcessor",
-          "api/processor/InterfaceWriter",
-          "api/processor/Node",
-          "api/processor/Reference",
-          "api/processor/TestcaseData",
-          "api/processor/Processor",
-          "api/processor/writeMetaData",
-          "api/processor/writeStaticData",
-          "api/processor/utilCartesian"
-        ]
-      }
+    "Model": [
+      "api/model/TableInterface",
+      "api/model/TestcaseDefinitionInterface",
+      "api/model/todo/TodoMeta",
+      "api/model/todo/TodoStatic",
+      "api/model/todo/TodoGenerator",
+      "api/model/todo/TodoReference"
+    ],
+    "Model Decision": [
+      "api/model-decision/sections/BaseSectionDefinition",
+      "api/model-decision/sections/BaseSingleRowSectionDefinition",
+      "api/model-decision/sections/ExecuteSectionDefinition",
+      "api/model-decision/sections/NeverExecuteSectionDefinition",
+      "api/model-decision/sections/MultiplicitySectionDefinition",
+      "api/model-decision/sections/SummarySectionDefinition",
+      "api/model-decision/sections/FieldSectionDefinition",
+      "api/model-decision/sections/FieldSubSectionDefinition",
+      "api/model-decision/sections/MultiRowSectionDefinition",
+      "api/model-decision/sections/TagSectionDefinition",
+      "api/model-decision/sections/FilterSectionDefinition",
+      "api/model-decision/TestcaseDefinitionDecision",
+      "api/model-decision/TableDecision",
+      "api/model-decision/sectionTypes",
+      "api/model-decision/functions/ValidateDouble",
+      "api/model-decision/functions/ValidateHelper",
+      "api/model-decision/functions/ValidateMissing"
+    ],
+    "Model Matrix": [
+      "api/model-matrix/TestcaseDefinitionMatrix",
+      "api/model-matrix/TableMatrix"
+    ],
+    "Importer xlsx": [
+      "api/importerXlsx/ImporterXlsx"
+    ],
+    "File Processor": [
+      "api/file-processor/ImporterInterface",
+      "api/file-processor/ParserInterface",
+      "api/processor/filter/FilterProcessorInterface",
+      "api/processor/filter/SimpleArrayFilterProcessor",
+      "api/processor/filter/SimpleArrayIgnoreFilterProcessor",
+      "api/file-processor/FileProcessor",
+      "api/file-processor/FileProcessor",
+      "api/file-processor/decision/ParserDecisionConstants",
+      "api/file-processor/decision/ParserDecision",
+      "api/file-processor/matrix/ParserMatrixConstants",
+      "api/file-processor/matrix/ParserMatrix",
+      "api/file-processor/specification/ParserSpecificationConstants",
+      "api/file-processor/specification/ParserSpecification",
+      "api/file-processor/specification/ParserSpecificationConverter"
+    ],
+    "Data Generator": [
+      "api/dataGenerator/DataGeneratorInterface",
+      "api/dataGenerator/DataGeneratorBase",
+      "api/dataGenerator/TDGServiceRegistry",
+      "api/dataGenerator/GeneratorFaker"
+    ],
+    "Processor": [
+      "api/processor/InterfaceProcessor",
+      "api/processor/InterfaceWriter",
+      "api/processor/Node",
+      "api/processor/Reference",
+      "api/processor/TestcaseData",
+      "api/processor/Processor",
+      "api/processor/writeMetaData",
+      "api/processor/writeStaticData",
+      "api/processor/utilCartesian"
     ]
   }
 }
