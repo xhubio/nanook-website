@@ -5,16 +5,16 @@ sidebar_label: Create data generator
 ---
 
 
-First of all we need to update the Excel sheet to use the
+First of all, we need to update the Excel sheet to use the
 new generator.
 
 ![step4](/img/tutorials/t2/step4.png)
 
-As you can see in the image we added two new 'FieldSubSection'. Also three more
+As you can see in the image, we added two new 'FieldSubSection'. Also, three more
 test cases are added just to make it more interesting.
 
-Also we removed the static email and replaced it with a generator call.
-We used the same generator three times with different parameter.
+We also removed the static email and replaced it with a generator call.
+We use the same generator three times with different parameters.
 
 Let’s create a generator which creates a person data record.
 The data to be generated is:  
@@ -83,16 +83,16 @@ makeUnique(firstName, lastName, domain) {
   - Choose a random domain
 
   - Depending on the size of the name and domain arrays the chance to create
-    duplicate email addresses is high. So we need a way to make the email unique
+    duplicate email addresses is high. So we need a way to make the email unique,
     but the names should still be included.
 
   - Return the person object.
 
   - The 'DataGenerator' has an internal SET which is used to store the values which need to be unique.
     The Generator now returns a person object, but in our table we would like to have
-    an 'email' or a 'firstName' not an object.
+    an 'email' or a 'firstName', not an object.
 
-Create another function to return strings in for the given parameter.
+Create another function to return strings for the given parameter.
 
 ``` js
 async generate(instanceId, testcase, todoGenerator) {
@@ -121,7 +121,7 @@ async generate(instanceId, testcase, todoGenerator) {
     for which field the data should be created.
 
   - Here we see the instanceId in action. Each time the generator is called
-    with the same instanceId it will return the same data. In our case we call the same
+    with the same instanceId, it will return the same data. In our case, we call the same
     generator three times with a different parameter. The generator should return fields from the
     same object.
 
@@ -131,8 +131,15 @@ async generate(instanceId, testcase, todoGenerator) {
 
   - Return the new data.
 
-Now let’s have a look at the generated result.
-In the 'tdg' sub folder are four sub directories 'TC1' to 'TC4'.
+Now we still need to register the generator in our tdg.js file.
+
+``` js
+const genPerson = new GeneratorPerson({ logger })
+  processor.generatorRegistry.registerGenerator('generatorPerson', genPerson)
+```
+
+Let’s have a look at the generated result.
+In the 'tdg' subfolder are four subdirectories 'TC1' to 'TC4'.
 For each test case one folder was created.
 
 ![step4.1](/img/tutorials/t2/step4.1.png)
@@ -171,7 +178,7 @@ The result should look like this.
   - The email build out of the first name and the last name
 
 Now each time the processor is called it will create new data for the four test cases and the data will always change.
-Also the email will always be unique.
+Also, the email will always be unique.
 
 > **Note**
 > 

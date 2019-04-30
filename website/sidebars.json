@@ -114,6 +114,9 @@
         "ids": [
           "api/file-processor/ImporterInterface",
           "api/file-processor/ParserInterface",
+          "api/processor/filter/FilterProcessorInterface",
+          "api/processor/filter/SimpleArrayFilterProcessor",
+          "api/processor/filter/SimpleArrayIgnoreFilterProcessor",
           "api/file-processor/FileProcessor",
           "api/file-processor/FileProcessor",
           "api/file-processor/decision/ParserDecisionConstants",

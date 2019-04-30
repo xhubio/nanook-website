@@ -1,68 +1,98 @@
 ---
 id: generalOverview
-title: Overview of Nanook test data generator and table processor
-sidebar_label: General Overview
+title: Overview of Nanook-Table
+sidebar_label: Nanook-Table Overview
 ---
 
 
-The following image shows the interaction of the processor with the outside world.
+![nanookTableDataCreation](/img/nanookTableDataCreation.svg)
 
-![processorOverview](/img/processor/processorOverview.svg)
+What is Nanook table?
 
-  - Understanding the picture  
-    The order of the arrows is the order in which the processor executes. The rectangles on
-    the left side shows the program flow in the processor. The arrows are interactions with
-    the generators and writers provided.
+It is a processor which reads Spreadsheets to defined test cases
+and test data. It processes the sheets and generates test cases and test data.
+It helps you to recreate the test cases and test data while you working on the
+specification of test cases in the spreadsheet files.
 
-## Init
+The spreadsheets help to keep the overview of the test cases and the
+test coverage. But is is hard to change the tests and update all the test data of
+you test cases. This is where Nanook-Table comes in.
 
-The init phase
-is where the custom code sets up the processor.
-You provide a generator registry with all the needed generators registered. Then you
-provide an array with all the needed writer.
+Component overview of Nanook-Table
 
-After loading all the spreadsheets you provide the table models as an array to the processor.
-Now the processor is prepared to work.
+![nanookTableOverview](/img/nanookTableOverview.svg)
 
-## Process
+## File Reader
 
-When the process function is called. The first thing is the setup of the generators and writers.
+A file reader is responsible to read spreadsheet files and providing
+a generic interface for a parser. There is a file reader which is
+able to read Microsoft Excel files and another reader may read OpenOffice
+documents.
 
-### loadStore()
+## Importer Map
 
-Loop over all the generators and call the 'loadStore()' function. This gives the generator the possibility
-to setup the generator as needed. The load store function of the generator is only executed if the property
-'useStore' is set to a true value.
+The file readers are registered in a map by the file extension they
+handle. For example:  
+The Excel file reader is registered with the extensions 'xls' and 'xlsx'.
+So the same reader may be registered multiple times.
 
-### writer.before()
+## Table Parser
 
-Loop over all the writers and call the 'before()' function. So the writer could do some setup stuff.
-Maybe some writers will write to a database and needs to setup the connection.
+The table parser is responsible for reading a table format. There is a
+parser to read the equivalence class table and another one to read the
+matrix table format.
 
-### loop tables
+## Parser Map
 
-After setup of the generators and writers the processor loops over all the tables. Each table can provide
-a list of test cases to be executed.
+Each parser is registered in a map by the table it understands. For example the
+equivalence class table reader is registered with the key '\<DECISION\_TABLE\>'.
+This key must be in the first cell of the table. The same parser may be registered
+under different keys.
 
-### loop test cases
+## File Processor
 
-Loop over all the test cases a table provides. Each test case is processed independently from each other.
-The first thing is to generate the data. For this it is calling the 'generate' function of all the generators
-defined in the test case. (Also it will solve all the references. But as this is no external interaction it
-is not shown in this picture.)
+The file processor takes a file name as input. Then it extracts the extension and checks if an
+importer is registered for this extension. If so, the file is read. One file (a workbook) may
+contain multiple tables. The file processor reads the first cell of each table and checks if a
+parser is registered for this table type. Each table no parser is registered for is being ignored.
 
-Then it calls the 'createPostProcessTodo' function of all the generators defined in the test case. After that the
-'PostProcessTodos' are executed. Now all the data for the test case should be created.
+If a parser is registered for this kind of table, the file processor gives over the table to
+the parser. The result of parsing is a table model.
 
-Next step is calling the the 'write()' function of all the provided writer.
+All the table models are stored in an array.
 
-### saveStore()
+## Generator
 
-Now all the data is generated and all the writers have exported the data in any format needed.
+A generator is responsible for generating data. The generator returns a value or may directly
+change or insert data to the given 'tescaseData' object.
 
-Loop over all the generators and call the 'saveStore()' function. This gives the generator the possibility
-to store the already generated data for the next run.
+## Service Registry
 
-### writer.after()
+All the generators are registered in a 'ServiceRegistry'. The name under which the generator is registered is
+the same name that is used in the table to call the generator. Also, each generator has access to the service
+registry and can call other generators this way.
 
-Here the writer could tear down if needed.
+## Writer
+
+A writer is responsible to create the output data in the format needed for the test. All the generated data
+is stored internally in a JSON structure. This object may be exported to many files with different format
+and content. This is the domain of the writer.
+
+## Writer Array
+
+All the writers are stored in an array. For each test case all the writers are called in the order they are stored
+in the array.
+
+## Filter
+
+A filter could filter created test cases. So if you tag your tests with a priority, you can later on filter
+for priorities.
+
+## Filter Map
+
+All the filter are stored in a map by the filter name.
+
+## Processor
+
+The processor glues everything together. It gets the tables from the 'File Processor', then it executes all the tables
+with the help of the generators and writers.

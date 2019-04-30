@@ -4,9 +4,7 @@ title: Table Interface
 sidebar_label: Table Interface
 ---
 
-
 <a name="TableInterface"></a>
-
 
 ## TableInterface
 Defines the interface for a table. All the table models must Implement
@@ -73,3 +71,4 @@ This is a helper method
 | Param | Type | Description |
 | --- | --- | --- |
 | testcaseName | <code>string</code> | The reference test case name |
+

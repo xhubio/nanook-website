@@ -14,11 +14,25 @@ many field sub sections. It is a kind of parenthesis around fields and a groupin
 
 This section contains all the equivalence classes for one single field.
 
-# MultiRowSection
+# MultiRowSections
+
+Multi row sections have multiple rows. One header row and 1..n data rows.
+
+## MultiRowSection
 
 The MultirowSections could be used for your own purpose. These sections are not directly supported by
 the test data generator like the field sections. But each data generator has access to the data from the
 multi row sections.
+
+## TagSection
+
+The tag section is used to add tags/labels to test cases. These tags could be used for filtering. If a test case
+uses references, all tags are collected of the chained test cases and could be filtered.
+
+## FilterSection
+
+The filter section defines filter for test cases. The filter works only in the master test case. So if you have
+test cases which uses references, the filter in a referenced test case is not executed.
 
 # Single Row Sections
 

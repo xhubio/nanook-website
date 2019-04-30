@@ -9,8 +9,8 @@ In the first tutorial we have created a normal equivalence class table. It shows
 that we need to create 39 test cases. But we still need to create the data manually.
 It does not create the data for us.
 
-So let us transform this table into a data generation table. To do this create a new column between 'Equivalence class' and 'Description'.
-The column header is 'generator'. In this column we add the commands to call generators which will create
+So let us transform this table into a data generation table. To do this, create a new column between 'Equivalence class' and 'Description'.
+The column header is named 'generator'. In this column we add the commands to call generators which will create
 the data for us.
 
 # Format the table
@@ -19,7 +19,7 @@ In the previous tutorial we have created an equivalence class table without any
 predefined format rules. But to make the table parsable for the table
 processor we need to follow some formatting rules.
 
-The next sections describe the format of the table to make it parseable.
+The next sections describe the format of the table needed to make it parseable.
 
 ## General Overview
 
@@ -70,11 +70,11 @@ how many of these sections are in the table. It can also contain actions on the 
 
 # Create the first table for data generation
 
-In this step we create a simple table with static data generation.
+In this step we will create a simple table with static data generation.
 
 ## Create table
 
-As the current implementation reads Excel Spreadsheets create a new Excel file.
+As the current implementation reads Excel spreadsheets, create a new Excel file.
 
   - Set the sheet identifier  
     The parser only considers sheets which have the right identifier set in the first cell.
@@ -110,7 +110,7 @@ As the current implementation reads Excel Spreadsheets create a new Excel file.
 | B      | FieldSubSection | The 'FieldSubSection' Identifier. |
 
   - Create the equivalence class for the email field  
-    In this example we just create one class.
+    In this example we only create one class.
     Add a new row with the following columns
 
 | Column | Data              | Description                                                            |
@@ -141,7 +141,7 @@ Just add 'TC1' or any other name you like.
 
 ## Create an initial npm module
 
-Create a new empty directory. Change into it and do npm init.
+Create a new empty directory. Change into it and run npm init.
 
 ``` c
 mkdir demo-tdg
@@ -191,7 +191,7 @@ doIt().then(() => {
 })
 ```
 
-  - Create a logger. For all tutorials we will take the Memory Logger. This
+  - Create a logger. For all tutorials we will use the Memory Logger. This
     logger stores all the log entries. It is a good logger for unit testing.
 
   - Tells the memory logger that it should also write the logs to console out.
@@ -200,10 +200,10 @@ doIt().then(() => {
     it into a table object as it is used by the processor.
 
   - Creates the processor.  
-    The processor needs a registry where all the available generators are registered. In
-    the current example the registry is empty. But a registry is required.  
-    The writer is responsible to write the created test data into the desired format. The default writer
-    just writes the test case data as a JSON file. You can add as many writers as you like.
+    The processor needs a registry in which all the available generators are registered. In
+    the current example, the registry is empty. But a registry is required.  
+    The writer is responsible to write the created test data in the desired format. The default writer
+    simply writes the test case data as a JSON file. You can add as many writers as you like.
 
   - Loads the spread sheet and creates the table object. You an call the load function
     multiple times depending on how many spreadsheets you would like to load.
@@ -255,11 +255,11 @@ The content of the file should look like the following:
 }
 ```
 
-  - The name of the table which creates this test case. (Later on we learn the details on this.)
+  - The name of the table which creates this test case. (Later on we will learn the details of this.)
 
-  - The name of the test case. The content of the header column in the sheet.
+  - The name of the test case. This corresponds to the content of the header column in the sheet.
 
-  - The data object contains all the generated data.
+  - The data object containing all the generated data.
 
   - The name of the sheet again.
 
@@ -272,12 +272,12 @@ The content of the file should look like the following:
 
   - The call tree of the tables. (This is for debugging your test data. More on this later.)
 
-Each time you call the script we generate the same data as we added static data in the table. Only the instanceIds
-are changing with each call of the script. In the next section we replace the static data with a generator.
+Each time we call the script, we generate the same data since we added static data in the table. Only the instanceIds
+are changing with each call of the script. In the next section we will replace the static data with a generator.
 
 > **Note**
 > 
 > The example code is located at:  
 > src/t2/step3  
-> Just type there:  
+> In there, simply run:  
 > node tdg.js
