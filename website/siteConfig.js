@@ -74,12 +74,10 @@ const siteConfig = {
 
   /* Colors for website */
   colors: {
-    primaryColor: '#999998',
+    primaryColor: '#009900',
     secondaryColor: '#5b504e',
-    primaryColor: 'rgb(34, 34, 34)',
-    secondaryColor: '#05A5D1',
-    tintColor: '#005068',
-    backgroundColor: '#f5fcff',
+    tintColor: '#990000',
+    backgroundColor: '#4277BB',
   },
 
   /* Custom fonts for website */
