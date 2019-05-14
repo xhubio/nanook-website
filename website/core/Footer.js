@@ -53,6 +53,8 @@ class Footer extends React.Component {
           <div>
             <h5>More</h5>
             <a href={`${this.props.config.baseUrl}imprint`}>Imprint</a>
+            <a href={`${this.props.config.baseUrl}privacyPolicy`}>Privacy Policy</a>
+
             <a href="https://github.com/xhubio/nanook-table/">GitHub</a>
             <a
               className="github-button"
