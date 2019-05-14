@@ -34,15 +34,6 @@ sidebar_label: Parser Decision Constants
 <dt><a href="#KEY_TABLE_START">KEY_TABLE_START</a></dt>
 <dd><p>The identifier for the decision table. @enum {string}</p>
 </dd>
-<dt><a href="#EXECUTE_SECTION">EXECUTE_SECTION</a></dt>
-<dd><p>The identifier for the &#39;execute section&#39;. @enum {string}</p>
-</dd>
-<dt><a href="#NEVER_EXECUTE_SECTION">NEVER_EXECUTE_SECTION</a></dt>
-<dd><p>The identifier for the &#39;never execute section&#39;. @enum {string}</p>
-</dd>
-<dt><a href="#MULTIPLICITY_SECTION">MULTIPLICITY_SECTION</a></dt>
-<dd><p>The identifier for the &#39;multiplicity section&#39;. @enum {string}</p>
-</dd>
 </dl>
 
 <a name="START_COLUMN_TESTCASE"></a>
@@ -97,23 +88,5 @@ MURO=MultiRow. The column where the 'comment' value is located. @enum {number}
 
 ## KEY\_TABLE\_START
 The identifier for the decision table. @enum {string}
-
-**Kind**: global constant  
-<a name="EXECUTE_SECTION"></a>
-
-## EXECUTE\_SECTION
-The identifier for the 'execute section'. @enum {string}
-
-**Kind**: global constant  
-<a name="NEVER_EXECUTE_SECTION"></a>
-
-## NEVER\_EXECUTE\_SECTION
-The identifier for the 'never execute section'. @enum {string}
-
-**Kind**: global constant  
-<a name="MULTIPLICITY_SECTION"></a>
-
-## MULTIPLICITY\_SECTION
-The identifier for the 'multiplicity section'. @enum {string}
 
 **Kind**: global constant  

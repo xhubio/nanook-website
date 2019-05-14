@@ -15,7 +15,7 @@ given as a parameter.
 * [GeneratorFaker](#GeneratorFaker)
     * [.logger](#GeneratorFaker+logger)
     * [.unique](#GeneratorFaker+unique)
-    * [.generate(instanceId, testcase, meta, args)](#GeneratorFaker+generate) ⇒ <code>object</code>
+    * [.generate(instanceId, testcase, todoGenerator)](#GeneratorFaker+generate) ⇒ <code>object</code>
 
 <a name="GeneratorFaker+logger"></a>
 
@@ -31,7 +31,7 @@ Defines if the generated value must be unique. Default is 'false'
 **Kind**: instance property of [<code>GeneratorFaker</code>](#GeneratorFaker)  
 <a name="GeneratorFaker+generate"></a>
 
-### generatorFaker.generate(instanceId, testcase, meta, args) ⇒ <code>object</code>
+### generatorFaker.generate(instanceId, testcase, todoGenerator) ⇒ <code>object</code>
 Generates the value and saves it for the given instance.
 
 **Kind**: instance method of [<code>GeneratorFaker</code>](#GeneratorFaker)  
@@ -41,8 +41,7 @@ needs referenced data which is not generated yet.
 
 | Param | Type | Description |
 | --- | --- | --- |
-| instanceId | <code>string</code> | The testcase instance id. for the same instance id the same data object will be returned. If this i undefined then always a new value will be created. |
-| testcase | <code>object</code> | The already generated testcase object. |
-| meta | <code>object</code> | Some meta information. tableName, row, column, ... |
-| args | <code>object/string</code> | Any arguments the generator may need |
+| instanceId | <code>string</code> | The testcase instance id. for the same instance id the same data object will be returned. If this is undefined then always a new value will be created. |
+| testcase | <code>object</code> | The already generated testcase data object. |
+| todoGenerator | <code>object</code> | The generator todo |
 

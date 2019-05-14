@@ -22,6 +22,9 @@ sidebar_label: Section Types
 <dt><a href="#FILTER_SECTION">FILTER_SECTION</a></dt>
 <dd><p>Section type definition: &#39;FilterSection&#39; @enum {string}</p>
 </dd>
+<dt><a href="#GENERATOR_SWITCH_SECTION">GENERATOR_SWITCH_SECTION</a></dt>
+<dd><p>Section type definition: &#39;GeneratorSwitchSection&#39; @enum {string}</p>
+</dd>
 <dt><a href="#SUMMARY_SECTION">SUMMARY_SECTION</a></dt>
 <dd><p>Section type definition: &#39;SummarySection&#39; @enum {string}</p>
 </dd>
@@ -67,6 +70,12 @@ Section type definition: 'TagSection' @enum {string}
 
 ## FILTER\_SECTION
 Section type definition: 'FilterSection' @enum {string}
+
+**Kind**: global constant  
+<a name="GENERATOR_SWITCH_SECTION"></a>
+
+## GENERATOR\_SWITCH\_SECTION
+Section type definition: 'GeneratorSwitchSection' @enum {string}
 
 **Kind**: global constant  
 <a name="SUMMARY_SECTION"></a>

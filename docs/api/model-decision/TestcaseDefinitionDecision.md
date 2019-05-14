@@ -20,6 +20,8 @@ A test case is one column in the test case part. This is the implementation for 
     * [.clone()](#TestcaseDefinitionDecision+clone) ⇒ <code>object</code>
     * [.createTags()](#TestcaseDefinitionDecision+createTags) ⇒ <code>array</code>
     * [.createFilter()](#TestcaseDefinitionDecision+createFilter) ⇒ <code>array</code>
+    * [.createGeneratorSwitches()](#TestcaseDefinitionDecision+createGeneratorSwitches) ⇒ <code>array</code>
+    * [._isTrue(val)](#TestcaseDefinitionDecision+_isTrue) ⇒ <code>boolean</code>
     * [.createTodos()](#TestcaseDefinitionDecision+createTodos) ⇒ <code>object</code>
     * [._getGeneratorCommandForSubSection(subSection)](#TestcaseDefinitionDecision+_getGeneratorCommandForSubSection) ⇒ <code>string</code>
     * [._createGeneratorTodo(subSection, generatorCmd, key)](#TestcaseDefinitionDecision+_createGeneratorTodo) ⇒ <code>object</code>
@@ -77,6 +79,25 @@ Returns all the filter found in this test case
 
 **Kind**: instance method of [<code>TestcaseDefinitionDecision</code>](#TestcaseDefinitionDecision)  
 **Returns**: <code>array</code> - filter  An Array with all the found filter  
+<a name="TestcaseDefinitionDecision+createGeneratorSwitches"></a>
+
+### testcaseDefinitionDecision.createGeneratorSwitches() ⇒ <code>array</code>
+Returns a list of generator names which should not be executed
+
+**Kind**: instance method of [<code>TestcaseDefinitionDecision</code>](#TestcaseDefinitionDecision)  
+**Returns**: <code>array</code> - generatorNames  An Array with alle the generator names to be switched off for this test case  
+<a name="TestcaseDefinitionDecision+_isTrue"></a>
+
+### testcaseDefinitionDecision.\_isTrue(val) ⇒ <code>boolean</code>
+Checks if the given string contains a valid true value
+
+**Kind**: instance method of [<code>TestcaseDefinitionDecision</code>](#TestcaseDefinitionDecision)  
+**Returns**: <code>boolean</code> - res  TRUE if the value is a valid boolean true value.  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| val | <code>string</code> | The expression to check |
+
 <a name="TestcaseDefinitionDecision+createTodos"></a>
 
 ### testcaseDefinitionDecision.createTodos() ⇒ <code>object</code>

@@ -34,6 +34,10 @@ uses references, all tags are collected of the chained test cases and could be f
 The filter section defines filter for test cases. The filter works only in the master test case. So if you have
 test cases which uses references, the filter in a referenced test case is not executed.
 
+## GeneratorSwitchSection
+
+The generator switch section defines generators to be switched off. So you can switch of generators on a test case level.
+
 # Single Row Sections
 
 Single row sections are sections which have only one row.

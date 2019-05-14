@@ -34,6 +34,7 @@ The table implementation for a decision table.
     * [.addNewMultiRowSection(name, position)](#TableDecision+addNewMultiRowSection) ⇒ <code>object</code>
     * [.addNewTagSection(name, position)](#TableDecision+addNewTagSection) ⇒ <code>object</code>
     * [.addNewFilterSection(name, position)](#TableDecision+addNewFilterSection) ⇒ <code>object</code>
+    * [.addNewGeneratorSwitchSection(name, position)](#TableDecision+addNewGeneratorSwitchSection) ⇒ <code>object</code>
     * [.addNewSummarySection(name, position)](#TableDecision+addNewSummarySection) ⇒ <code>object</code>
     * [.addNewExecuteSection(name, position)](#TableDecision+addNewExecuteSection) ⇒ <code>object</code>
     * [.addNewNeverExecuteSection(name, position)](#TableDecision+addNewNeverExecuteSection) ⇒ <code>object</code>
@@ -244,6 +245,20 @@ a section will be added.
 
 ### tableDecision.addNewFilterSection(name, position) ⇒ <code>object</code>
 Adds a new MultiRowSection to the model. For each existing testcase
+a section will be added.
+
+**Kind**: instance method of [<code>TableDecision</code>](#TableDecision)  
+**Returns**: <code>object</code> - sectionDefinition  The created section definition  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| name | <code>string</code> | The name for the new section. The name must not be used before |
+| position | <code>integer</code> | (optional) The position where to add the new section. |
+
+<a name="TableDecision+addNewGeneratorSwitchSection"></a>
+
+### tableDecision.addNewGeneratorSwitchSection(name, position) ⇒ <code>object</code>
+Adds a new GeneratorSectionDefinition to the model. For each existing testcase
 a section will be added.
 
 **Kind**: instance method of [<code>TableDecision</code>](#TableDecision)  

@@ -24,6 +24,7 @@ Defines the interface for a testcase definition
     * [.name](#TestcaseDefinitionInterface+name)
     * [.createTags()](#TestcaseDefinitionInterface+createTags) ⇒ <code>array</code>
     * [.createFilter()](#TestcaseDefinitionInterface+createFilter) ⇒ <code>array</code>
+    * [.createGeneratorSwitches()](#TestcaseDefinitionInterface+createGeneratorSwitches) ⇒ <code>array</code>
     * [.createTodos()](#TestcaseDefinitionInterface+createTodos)
 
 <a name="TestcaseDefinitionInterface+id"></a>
@@ -102,6 +103,13 @@ Returns all the filter found in this test case
 
 **Kind**: instance method of [<code>TestcaseDefinitionInterface</code>](#TestcaseDefinitionInterface)  
 **Returns**: <code>array</code> - filter  An Array with all the found filter  
+<a name="TestcaseDefinitionInterface+createGeneratorSwitches"></a>
+
+### testcaseDefinitionInterface.createGeneratorSwitches() ⇒ <code>array</code>
+Returns a list of generator names which should not be executed
+
+**Kind**: instance method of [<code>TestcaseDefinitionInterface</code>](#TestcaseDefinitionInterface)  
+**Returns**: <code>array</code> - generatorNames  An Array with alle the generator names to be switched off for this test case  
 <a name="TestcaseDefinitionInterface+createTodos"></a>
 
 ### testcaseDefinitionInterface.createTodos()

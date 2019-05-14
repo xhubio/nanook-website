@@ -1,5 +1,8 @@
 {
   "docs": {
+    "Quickstart": [
+      "quickstart/quickstart"
+    ],
     "Tutorials": [
       "tutorials/overview",
       "tutorials/createEquivalenceClassTable",
@@ -75,6 +78,7 @@
       "api/model-decision/sections/MultiRowSectionDefinition",
       "api/model-decision/sections/TagSectionDefinition",
       "api/model-decision/sections/FilterSectionDefinition",
+      "api/model-decision/sections/GeneratorSwitchSectionDefinition",
       "api/model-decision/TestcaseDefinitionDecision",
       "api/model-decision/TableDecision",
       "api/model-decision/sectionTypes",

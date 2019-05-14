@@ -26,6 +26,7 @@ The parser implementation to parse decision tables.
     * [.handleMultiRowSection(table, sheetName, importer, sectionName, startRow, endRow)](#ParserDecision+handleMultiRowSection)
     * [.handleTagSection(table, sheetName, importer, sectionName, startRow, endRow)](#ParserDecision+handleTagSection)
     * [.handleFilterSection(table, sheetName, importer, sectionName, startRow, endRow)](#ParserDecision+handleFilterSection)
+    * [.handleGeneratorSwitchSection(table, sheetName, importer, sectionName, startRow, endRow)](#ParserDecision+handleGeneratorSwitchSection)
     * [.handleMultiplicitySection(table, sectionName)](#ParserDecision+handleMultiplicitySection)
     * [.handleExecuteSection(table, sectionName)](#ParserDecision+handleExecuteSection)
     * [.handleNeverExecuteSection(table, sectionName)](#ParserDecision+handleNeverExecuteSection)
@@ -181,6 +182,22 @@ Adds a new TagSection to the table. Updates the data for all the test cases
 
 ### parserDecision.handleFilterSection(table, sheetName, importer, sectionName, startRow, endRow)
 Adds a new TagSection to the table. Updates the data for all the test cases
+
+**Kind**: instance method of [<code>ParserDecision</code>](#ParserDecision)  
+
+| Param | Type | Description |
+| --- | --- | --- |
+| table | <code>object</code> | The table to store the current sheet data |
+| sheetName | <code>string</code> | The name of the sheet |
+| importer | <code>object</code> | The importer |
+| sectionName | <code>string</code> | The name of this section |
+| startRow | <code>number</code> | The row the section begins |
+| endRow | <code>number</code> | The row the next section begins |
+
+<a name="ParserDecision+handleGeneratorSwitchSection"></a>
+
+### parserDecision.handleGeneratorSwitchSection(table, sheetName, importer, sectionName, startRow, endRow)
+Adds a new GeneratorSwitch to the table. Updates the data for all the test cases
 
 **Kind**: instance method of [<code>ParserDecision</code>](#ParserDecision)  
 
