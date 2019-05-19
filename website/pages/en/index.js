@@ -43,23 +43,21 @@ class HomeSplash extends React.Component {
     const SplashContainer = props => (
       <div className="homeContainer">
         <div className="homeSplashFade">
-          <Logo img_src={`${baseUrl}img/nanook.svg`} />
-          <div className="wrapper homeWrapper">{props.children}</div>
+          <div className="wrapper homeWrapper"><Logo img_src={`${baseUrl}img/nanook.svg`} />{props.children}</div>
         </div>
       </div>
     );
 
     const Logo = props => (
       <div className="projectLogo">
-        <img src={props.img_src} alt="Project Logo" />
+        <img src={props.img_src} alt="Nanook logo" />
       </div>
     );
 
     const ProjectTitle = () => (
-      <h2 className="projectTitle">
+      <h2 className="projectTitle2">
         {siteConfig.title}
-        <small>{siteConfig.tagline}</small>
-      </h2>
+      </h2>      
     );
 
     const PromoSection = props => (
@@ -70,9 +68,9 @@ class HomeSplash extends React.Component {
       </div>
     );
 
-    const Button = props => (
+    const ButtonL = props => (
       <div className="pluginWrapper buttonWrapper">
-        <a className="button" href={props.href} target={props.target}>
+        <a className="buttonL" href={props.href} target={props.target}>
           {props.children}
         </a>
       </div>
@@ -82,11 +80,14 @@ class HomeSplash extends React.Component {
       <SplashContainer>
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
+          <h3 className="projectTitle">      
+            <small>{siteConfig.tagline}</small>
+          </h3>
           <div className="minitext">Combine the Power of equivalence class tables and data generators</div>
           <PromoSection>
-            <Button href="#try">Try It Out</Button>
-            <Button href={docUrl('tutorials/overview.html')}>Get Started Guides</Button>
-            <Button href={docUrl('tutorials/overview.html')}>Nanook Integrations</Button>
+            <ButtonL href="#try">Try It Out</ButtonL>
+            <ButtonL href={docUrl('tutorials/overview.html')}>Get Started Guides</ButtonL>
+            <ButtonL href={docUrl('tutorials/overview.html')}>Nanook Integrations</ButtonL>
           </PromoSection>
         </div>
       </SplashContainer>
