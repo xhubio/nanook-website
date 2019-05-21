@@ -57,7 +57,7 @@ class HomeSplash extends React.Component {
     const ProjectTitle = () => (
       <h2 className="projectTitle2">
         {siteConfig.title}
-      </h2>      
+      </h2>
     );
 
     const PromoSection = props => (
@@ -80,14 +80,12 @@ class HomeSplash extends React.Component {
       <SplashContainer>
         <div className="inner">
           <ProjectTitle siteConfig={siteConfig} />
-          <h3 className="projectTitle">      
+          <h3 className="projectTitle">
             <small>{siteConfig.tagline}</small>
           </h3>
           <div className="minitext">Combine the Power of equivalence class tables and data generators</div>
           <PromoSection>
-            <ButtonL href="#try">Try It Out</ButtonL>
             <ButtonL href={docUrl('tutorials/overview.html')}>Get Started Guides</ButtonL>
-            <ButtonL href={docUrl('tutorials/overview.html')}>Nanook Integrations</ButtonL>
           </PromoSection>
         </div>
       </SplashContainer>

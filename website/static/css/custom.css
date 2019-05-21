@@ -373,7 +373,7 @@
         margin        : 0;
         padding       : 0;
         vertical-align: baseline;
-        
+
     }
 
     body {
@@ -695,7 +695,7 @@ article p img {
     border         : 0px solid #233659;
     border-radius  : 3px;
     color          : #fff;
-    opacity: 0.75;    
+    opacity: 0.75;
     background: hsla(0,0%,100%,.15);
     display        : inline-block;
     font-size      : 14px;
@@ -714,7 +714,7 @@ article p img {
     font-size: 16px;
     background: hsla(0,0%,100%,.15);
     color: #fff;
-    opacity: 0.75;  
+    opacity: 0.75;
     text-align: center;
     padding: 14px 28px;
     min-width: 230px;
@@ -798,8 +798,8 @@ blockquote {
 }
 
 .homeContainer .homeWrapper .projectLogo img {
-    height      : 300px; 
-    width       : 2500px;    
+    height      : 300px;
+    width       : 2500px;
     margin-top: -140px;
     opacity: 0.1;
 }
@@ -834,7 +834,6 @@ blockquote {
 
 .projectTitle {
     font-family: "Knockout 27 A","Knockout 27 B",Helvetica,Arial,sans-serif;
-    text-transform: uppercase;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     font-size: 100px;
@@ -848,7 +847,6 @@ blockquote {
 
 .projectTitle2 {
     font-family: "Knockout 27 A","Knockout 27 B",Helvetica,Arial,sans-serif;
-    text-transform: uppercase;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     font-size: 100px;
@@ -1096,7 +1094,6 @@ blockquote {
     margin     : 0;
     position   : relative;
     z-index    : 9999;
-    text-transform: uppercase;
 }
 
 .fixedHeaderContainer header h3 {

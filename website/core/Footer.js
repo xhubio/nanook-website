@@ -45,12 +45,6 @@ class Footer extends React.Component {
             </a>
           </div>
           <div>
-            <h5>Community</h5>
-            <a href={this.pageUrl('users.html', this.props.language)}>
-              User Showcase
-            </a>
-          </div>
-          <div>
             <h5>More</h5>
             <a href={`${this.props.config.baseUrl}imprint`}>Imprint</a>
             <a href={`${this.props.config.baseUrl}privacyPolicy`}>Privacy Policy</a>
