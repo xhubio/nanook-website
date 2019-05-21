@@ -1095,7 +1095,8 @@ blockquote {
     line-height: 18px;
     margin     : 0;
     position   : relative;
-    z-index    : 9999
+    z-index    : 9999;
+    text-transform: uppercase;
 }
 
 .fixedHeaderContainer header h3 {
