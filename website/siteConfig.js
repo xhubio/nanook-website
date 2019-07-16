@@ -55,7 +55,7 @@ const siteConfig = {
 
   // For no header links in the top nav bar -> headerLinks: [],
   headerLinks: [
-    {doc: 'tutorials/overview', label: 'Docs'},
+    {doc: 'quickstart/quickstart', label: 'Docs'},
     {doc: 'api/logger/LoggerInterface', label: 'API'},
     /* you can add external links */
     {blog: true, label: 'Blog'},

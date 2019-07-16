@@ -85,7 +85,7 @@ class HomeSplash extends React.Component {
           </h3>
           <div className="minitext">Combine the Power of equivalence class tables and data generators</div>
           <PromoSection>
-            <ButtonL href={docUrl('tutorials/overview.html')}>Get Started Guides</ButtonL>
+            <ButtonL href={docUrl('quickstart/quickstart.html')}>The 5 minute Quickstart</ButtonL> <ButtonL href={docUrl('guide/generalOverview.html')}>Get Started Guides</ButtonL>
           </PromoSection>
         </div>
       </SplashContainer>

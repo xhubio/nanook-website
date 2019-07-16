@@ -1,9 +1,8 @@
 ---
 id: quickstart
-title: Quickstart
-sidebar_label: Quickstart
+title: The 5 minute Quickstart
+sidebar_label: The 5 minute Quickstart
 ---
-
 
 This is a tutorial on Nanook – test case generator. It will take you through a
 basic overview and examples including simple test data generator setup.
