@@ -379,7 +379,8 @@
     body {
         color                   : #233659;
         color:#0d122b;
-        font-family             : -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif;
+        color: #f7f7f7;
+        font-family             : Montserrat,sans-serif;
         font-size               : 16px;
         line-height             : 1.5;
         -ms-text-size-adjust    : 100%;
@@ -728,7 +729,6 @@ article p img {
 }
 
 
-
 .buttonL:hover {
     background: #fff;
     color     : #233659
@@ -794,13 +794,10 @@ blockquote {
 .homeContainer .homeWrapper .wrapper {
     margin   : 0 auto;
     max-width: 900px;
-    padding  : 0 20px
+    padding  : 0 0px 
 }
 
-.homeContainer .homeWrapper .projectLogo img {
-    height      : 300px;
-    width       : 2500px;
-    margin-top: -140px;
+.homeContainer .homeWrapper .projectLogo img {    
     opacity: 0.1;
 }
 
@@ -824,8 +821,8 @@ blockquote {
 }
 
 .projectLogo img {
-    height       : 100px;
-    margin-bottom: 0;
+    width: 100%;
+    height: 100%;    
 }
 
 .projectIntro {
@@ -833,7 +830,7 @@ blockquote {
 }
 
 .projectTitle {
-    font-family: "Knockout 27 A","Knockout 27 B",Helvetica,Arial,sans-serif;
+    font-family: Montserrat,sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
     font-size: 100px;
@@ -846,13 +843,13 @@ blockquote {
 }
 
 .projectTitle2 {
-    font-family: "Knockout 27 A","Knockout 27 B",Helvetica,Arial,sans-serif;
+    font-family: Montserrat,sans-serif;
     font-weight: 400;
     -webkit-font-smoothing: antialiased;
-    font-size: 100px;
-    font-stretch: 100%;
-    letter-spacing: 1.5px;
-    line-height: 100px;
+    font-size: 60px;
+    font-stretch: 50%;
+    letter-spacing: 0.1px;
+    line-height: .5em;
     color: #fff;
     opacity: 0.9;
     margin-top: 200px;
@@ -862,19 +859,16 @@ blockquote {
 
 .projectTitle>small {
     display    : block;
-    font-weight: 400;
-    font-size  : 50%;
-    line-height: 1em;
-    margin     : .7em 0 1.3em
+    font-size  : 30px;
 }
 
 .minitext {
     margin: 0 0 15px 0;
-    font-family: "Whitney SSm A","Whitney SSm B","Helvetica Neue",Helvetica,Arial,sans-serif;
+    font-family: Montserrat,sans-serif;
     font-weight: 400;
     text-transform: none;
     color: #565b73;
-    letter-spacing: .15em;;
+    letter-spacing: .15em;
     font-weight: 500;
     text-align: center;
     padding: 0;
@@ -887,20 +881,29 @@ blockquote {
         margin   : .3em 0
     }
 
-    .projectLogo img {
-        height       : 200px;
-        margin-bottom: 10px
+    .projectTitle2 {
+        font-size: 80px;
+        font-stretch: 80%;
+        line-height: 80px;
     }
 
     .homeContainer .homeWrapper {
         padding-left : 10px;
-        padding-right: 10px
+        padding-right: 10px;
     }
 }
 
 @media only screen and (min-width:736px) {
+
+    .projectTitle2 {
+        font-size: 100px;
+        font-stretch: 100%;
+        line-height: 100px;
+    }
+
     .homeContainer .homeWrapper {
-        position: relative
+        position: relative;
+
     }
 
     .homeContainer .homeWrapper #inner {
@@ -912,23 +915,6 @@ blockquote {
 @media only screen and (min-width:1200px) {
     .homeContainer .homeWrapper #inner {
         max-width: 750px
-    }
-
-    .homeContainer .homeWrapper .projectLogo {
-        align-items    : center;
-        bottom         : 0;
-        display        : flex;
-        justify-content: flex-end;
-        left           : 0;
-        padding        : 2em 100px 4em;
-        position       : absolute;
-        right          : 0;
-        top            : 0
-    }
-
-    .homeContainer .homeWrapper .projectLogo img {
-        height    : 100%;
-        max-height: 250px
     }
 }
 
@@ -1128,7 +1114,8 @@ blockquote {
 }
 
 .promoSection .promoRow .pluginWrapper {
-    display: block
+    display: block;
+    height: 52px
 }
 
 .promoSection .promoRow .pluginWrapper.ghStarWrapper,
@@ -1513,6 +1500,13 @@ input::placeholder {
 
 .container.paddingTop {
     padding-top: 80px
+}
+
+.mainContainer {
+    flex     : 1 1 auto;
+    max-width: 100%;
+    padding  : 40px 0;
+    background-color: #f7f7f7;
 }
 
 @media only screen and (max-width:735px) {
