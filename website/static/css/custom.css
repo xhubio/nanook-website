@@ -379,7 +379,6 @@
     body {
         color                   : #233659;
         color:#0d122b;
-        color: #f7f7f7;
         font-family             : Montserrat,sans-serif;
         font-size               : 16px;
         line-height             : 1.5;
@@ -1460,8 +1459,7 @@ input::placeholder {
 }
 
 .lightBackground {
-    background: #f7f7f7
-}
+ }
 
 .darkBackground {
     background: gray;
@@ -1506,7 +1504,6 @@ input::placeholder {
     flex     : 1 1 auto;
     max-width: 100%;
     padding  : 40px 0;
-    background-color: #f7f7f7;
 }
 
 @media only screen and (max-width:735px) {
