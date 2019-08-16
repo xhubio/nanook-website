@@ -1,9 +1,9 @@
 ---
 id: instanceIds
-title: Understanding instance ids
+title: Understanding Instance Ids
 sidebar_label: Instance IDs
 ---
 
 
 
-Some Text overview Understanding instance ids
+Some Text on understanding instance ids

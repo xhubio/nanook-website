@@ -5,12 +5,7 @@ sidebar_label: Create writer
 ---
 
 
-This chapter will show how to create your own writer and how to make use of them. For this tutorial
-the writer should generate a CSV file of the created test data. The data is written on a per
-test case basis. If you need one file containing all the data of all test cases, it is a good
-practice to aggregate the file later on, shortly before execution, so that you can store the generated
-data and decide later which test cases to include in the next run, or if you would
-like to retest only some of the tests. So I recommend to split the data per test cases.
+This chapter will show you how to create your own writer and how to use it. For this tutorial the writer will generate a CSV file of the generated test data. The data is written on a per test case basis. If you need one file containing all the data for all the test cases, it is a good practice to aggregate the file shortly  before execution. This way, with the data stored, you can decide later on which test cases to include in the next run, or if you would like to retest only some of the tests. Our recommendation is to split the data on a test cases per test case basis.
 
 # Create the writer
 
@@ -48,17 +43,13 @@ class DefaultWriter extends InterfaceWriter {
 }
 ```
 
-  - The only function which needs to be overwritten is the 'async write(testcaseData)' function.
-    It is called for each test case with all the created test case data. The 'testcaseData' object
-    contains the data. The default writer will simply write out this object. If you need many different files,
-    each writer will extract only the data it needs and write it to a file.
+  - The only function that needs to be overwritten is the 'async write(testcaseData)' function. It is called for each test case with all the created test case data. The 'testcaseData' object contains the data. The default writer will simply write out this object. If you need multiple different files, each writer will extract only the data it needs and write it to a file.
 
   - Creates a file name.
 
   - Writes the file.
 
-Now it’s time for your own writer.
-Create a file called 'csvWriter.js' and add the following content.
+Now it’s time for your own writer. Create a file called 'csvWriter.js' and add the following content.
 
 ``` js
 const fs = require('fs')
@@ -109,11 +100,9 @@ module.exports.CsvWriter = CsvWriter
 
   - Set the delimiter for the CSV file.
 
-  - Create the file name. In this function we do not create the directory if it doesn’t exist, because this is
-    already done in the default writer.
+  - Create the file name. In this function we do not create the directory if it doesn’t exist (because this is already done in the default writer).
 
-  - Iterate over all the instanceIds of the data object. In this case, we do not distinguish between the main
-    data and the referenced data. But this depends on the use case.
+  - Iterate over all the instanceIds of the data object. In this case, we do not distinguish between the main data and the referenced data.
 
   - Get the data object of the current instanceId.
 
@@ -121,7 +110,7 @@ module.exports.CsvWriter = CsvWriter
 
   - Write the file.
 
-The next step is adding the writer to the processor. For this, the 'tdg.js' file needs to be modified.
+The next step is to add the writer to the processor. For this, the 'tdg.js' file needs to be modified.
 
 ``` js
 const path = require('path')
@@ -171,11 +160,9 @@ doIt().then(() => {
 
   - Create an instance of the csv writer.
 
-  - The 'createDefaultWriter()' function returns an array with one default writer. So we just get the first
-    writer from the array.
+  - The 'createDefaultWriter()' function returns an array with one default writer, so we just get the first writer from the array.
 
-  - Create an array with both writers. The writers are executed in the given order, so only the first writer
-    needs to create the output directory.
+  - Create an array with both writers. The writers are executed in the given order, so only the first writer needs to create the output directory.
 
 Now run the execution again. Afterwards, you will find an additional file called 'person.csv' in the result directory.
 
