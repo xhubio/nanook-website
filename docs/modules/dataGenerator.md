@@ -9,9 +9,9 @@ sidebar_label: Data Generator
 
 The generator is responsible for generating data. The processor will call all the generators in a loop until each generator has returned a value. Should the generator directly manipulate the testcaseData object, it must nevertheless return a dummy value.
 
-## Generator life cycle
+## Generator Lifecycle
 
-![Generator life cycle](/img/data-generator/lifeCycle.svg)
+![Generator Lifecycle](/img/data-generator/lifeCycle.svg)
 
 The image shows the abstract lifecycle of a generator. When the processor starts up, it gets all the generators registered in the registry and calls the 'loadStore' function. Now, every generator is ready to be used.
 
