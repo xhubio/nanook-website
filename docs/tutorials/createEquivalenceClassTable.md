@@ -14,14 +14,14 @@ a virtual application. The user can freely choose the userId and the password.
 
 The next chapter will show the specification for this application dialog. Step by step we will then create the equivalence class table.
 
-# User account creation
+## User account creation
 
 The example use case in this tutorial is to create tests for the user id creation.
 The application is a website where a user can enter their userId, a password, and re-enter the latter for verification.
 
 The following three chapters show the specification for each field of our demo application.
 
-## User ID
+### User ID
 
   - The user is able to choose their own id.
 
@@ -39,7 +39,7 @@ The following three chapters show the specification for each field of our demo a
 
   - The user name is case insensitive.
 
-## Password
+### Password
 
 The password has to meet the following requirements:
 
@@ -57,13 +57,13 @@ The password has to meet the following requirements:
 
   - It must contain at least one number, one upper case letter, one lower case letter, and one special character.
 
-## Second password field
+### Second password field
 
 The second password has the same requirements as the first password field, with one additional restriction:
 
   - The password must equal the first password
 
-# Create an initial table
+##   Create an initial table
 
 Create an empty spreadsheet and enter all the fields from the specification. When entering the fields, leave some empty rows between each field.
 The following fields should be entered in the first column:
@@ -78,7 +78,7 @@ The sheet should look similar to this:
 
 ![step1](/img/tutorials/t1/step1.png)
 
-# Fill the equivalence class data
+##   Fill the equivalence class data
 
 For each field we need to create the equivalence classes. This is a group of values to which the application behaves equivalent to.
 
@@ -196,7 +196,7 @@ Now the table should look like this:
 
 Also note the added header row.
 
-# Add calculations and prettify the table
+##   Add calculations and prettify the table
 
 Now that we have all the equivalence classes filled by field, we are able to
 calculate how many test cases are necessary to test this functionality.
@@ -226,7 +226,7 @@ These are the test case columns. Each column represents one test case.
 The formula from column B is copied into each of the new test case columns.
 As there is no value entered in the column, it shows '0' for all of the columns.
 
-# Start filling the table with decisions
+##   Start filling the table with decisions
 
 The table is prepared and ready to be used.
 Let’s start making decisions.
@@ -236,7 +236,7 @@ We need to choose one equivalence class per field and combine them.
 To make things a little easier, it's a good idea to enter an additional formula in the 'result' row 'C47'.
 The formula sums up all results in the 'Summary' row '=SUM(D47:W47)'.
 
-## Test case 1
+### Test case 1
 
 From the field 'userId' we only choose the first row with the class 'empty'. To do this, enter an 'x' in the column 'D'.
 
@@ -254,13 +254,13 @@ The result is shown in the last row named 'Summary'. There we can see '156'. So 
 
 Now you can repeat this with the second test case.
 
-## Test case 2
+### Test case 2
 
 Choose 'too short' for the userId and do the same as for test case '1' for the rest of the fields.
 
 And again we have 156 test cases taken care of.
 
-## Test case 3 to 11
+### Test case 3 to 11
 
 You can do the same pattern for all the cases where a value in 'userId' causes
 an error. In each of these cases the value entered in the password fields
@@ -270,7 +270,7 @@ is not relevant.
 
 In column 'C' in row '47' we can see that these 11 test cases cover 1716 cases. The goal of the table is to obtain 100%. We need to add more test cases to cover all of them. However, as the table fills up, the amount of test coverage per test case will decrease.
 
-# Add a 'result' section
+##   Add a 'result' section
 
 So far, we have defined how we think the application
 behaves, but it is not shown in the table. For this, add new rows under the 'Summary' row.
@@ -292,7 +292,7 @@ For each test case we can now specify the expected behaviour.
 
 ![step5 withResuts](/img/tutorials/t1/step5_withResuts.png)
 
-# Cleaning up the table
+##   Cleaning up the table
 
 As the table grows, it will become increasingly difficult to build combinations.
 So it is very helpful if the table follows a certain pattern (which is not always possible).
@@ -321,7 +321,7 @@ In the table you can now use the same logic for 'password' as we did before for 
 
 ![step6 tc12 22](/img/tutorials/t1/step6_tc12-22.png)
 
-# Iterate over the 'password2' field
+## Iterate over the 'password2' field
 
 The following procedure depends on how the application works. Will it first validate that password2
 is different form the first password field or does it first do the same checks as for the first password input?
@@ -335,7 +335,7 @@ Now the table should look like this:
 We also added a new error message for the case in which the passwords are different.
 When adding new test cases, always remember to update the formula for summarizing the created test cases.
 
-# Reorder the rows for 'password2'
+## Reorder the rows for 'password2'
 
 After filling out the cells for password2, we can see that the second to last
 row is a valid case, but the last row is an invalid case. So these two rows need to

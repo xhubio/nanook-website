@@ -26,7 +26,7 @@ error(arg)
 fatal(arg)
 ```
 
-# LoggerInterface
+## LoggerInterface
 
 This is the interface each logger must implement to be used in xhubiotable.
 
@@ -44,7 +44,7 @@ The following loglevels exists:
 }
 ```
 
-## Functions
+### Functions
 
 ``` js
 /**
@@ -94,18 +94,18 @@ async error(message) {}
 async fatal(message) {}
 ```
 
-# LoggerMemory
+## LoggerMemory
 
 This logger is mainly used for unit testing. It stores
 all the logs in an array by level type. This way, you can get the logs
 after the test along with proof that the right logs where generated.
 
-## Properties
+### Properties
 
   - writeConsole  
     When set to true, all the logs are also written to the console
 
-## Functions
+### Functions
 
 All the functions from the LoggerInterface plus these functions.
 
@@ -117,7 +117,7 @@ All the functions from the LoggerInterface plus these functions.
 async clear() {}
 ```
 
-## Retrieve the logs
+### Retrieve the logs
 
 To get all the logs read the property 'logger.entries'. This returns a hash where for each logLevel
 the logs are stored.

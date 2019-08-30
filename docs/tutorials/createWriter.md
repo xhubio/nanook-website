@@ -7,7 +7,7 @@ sidebar_label: Create writer
 
 This chapter will show you how to create your own writer and how to use it. For this tutorial the writer will generate a CSV file of the generated test data. The data is written on a per test case basis. If you need one file containing all the data for all the test cases, it is a good practice to aggregate the file shortly  before execution. This way, with the data stored, you can decide later on which test cases to include in the next run, or if you would like to retest only some of the tests. Our recommendation is to split the data on a test cases per test case basis.
 
-# Create the writer
+## Create the writer
 
 First let’s have a look at the default writer provided by the '@xhubio/nanook-table' module.
 

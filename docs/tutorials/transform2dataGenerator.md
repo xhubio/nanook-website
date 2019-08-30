@@ -11,7 +11,7 @@ It didn't create the data for us.
 
 So let's transform this table into a data generation table. To do this, we'll insert a new column between 'Equivalence class' and 'Description' and type in  'generator' as the header. In this column, we will add the commands to call generators that will create the data for us.
 
-# Format the table
+## Format the table
 
 In the previous tutorial, we created an equivalence class table without any
 predefined format rules. However, if we want the table to be parsable for the table
@@ -21,7 +21,7 @@ The next sections describe the format required to make the table parseable.
 
 ## General Overview
 
-# Layout Equivalence Class Table
+## Layout Equivalence Class Table
 
 ![Example table](/img/model-decision/table.jpg)
 
@@ -53,11 +53,11 @@ One fieldSection may have many fieldSubSections. The FieldSection groups fields 
 
 The multiple row sections can be used to describe the expected results or error messages. It is up to the user how many of these sections are in the table. It can also contain actions on the UI or other information needed.
 
-# Create the first table for data generation
+## Create the first table for data generation
 
 In this step we will create a simple table with static data generation.
 
-## Create table
+### Create table
 
 Since the current implementation reads Excel spreadsheets, let's create a new Excel file.
 
@@ -121,9 +121,9 @@ Just add 'TC1' or any other name you like.
 
 ![step2](/img/tutorials/t2/step2.png)
 
-# Create a project for creating the data
+## Create a project for creating the data
 
-## Create an initial npm module
+### Create an initial npm module
 
 Create a new empty directory. Change into it and run npm init.
 
@@ -193,7 +193,7 @@ doIt().then(() => {
 
 Create a directory 'resources' and copy the excel file you created into it. The Excel file must be named 'demo.xlsx'.
 
-## Run the script
+### Run the script
 
 To run the script, execute:
 
@@ -201,7 +201,7 @@ To run the script, execute:
 
 After doing this, you should find a new file called 'tdg/TC1/testcaseData.json'. This file was written by the default writer.
 
-## Understand the generated data
+### Understand the generated data
 
 The content of the file should look like this:
 

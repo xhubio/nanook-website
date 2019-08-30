@@ -9,7 +9,7 @@ basic overview and examples including simple test data generator setup.
 You’ll find detailed description of the tool in our full tutorial and user
 manual.
 
-# Equivalence Class Table
+## Equivalence Class Table
 
 Test cases are defined in an ECT - Equivalence Class Table, which refers to
 the concept of classes with equivalent behavior within a single application.
@@ -52,7 +52,7 @@ as the userId is empty.
 
 Columns G to J define the other test cases we would like to cover.
 
-# Generating test data
+## Generating test data
 
 Finally, let's generate the test data on the basis of table we just created.
 First, the "quickstart-source" repository has to be cloned using the command

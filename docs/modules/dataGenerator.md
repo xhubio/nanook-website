@@ -5,11 +5,11 @@ sidebar_label: Data Generator
 ---
 
 
-# Generator Overview
+## Generator Overview
 
 The generator is responsible for generating data. The processor will call all the generators in a loop until each generator has returned a value. Should the generator directly manipulate the testcaseData object, it must nevertheless return a dummy value.
 
-## Generator Lifecycle
+### Generator Lifecycle
 
 ![Generator Lifecycle](/img/data-generator/lifeCycle.svg)
 
@@ -27,14 +27,14 @@ The generator now has the possibility to return an array of todos. For each retu
 
 After the processor has finished executing all the test cases, the 'saveStore' function is called.
 
-## InstanceId
+### InstanceId
 
 The idea behind the 'instanceId' is to create an ID for each instance of generated data. So if the generator is called twice with the same instanceId it will return the same data. The instanceId is created by the processor for each test case.
 
   - Example  
     Let's say we have a test case where the generator should create a password, but the password needs to be entered in two separete fields - 'Password' and 'Password repeat'. This is common each time a user needs to reset the password. Thus, in the equivalence class table the generator is called twice with the same instanceId. Then the generator should return the same data. This is explained in more detail  the tutorial.
 
-## Post processing
+### Post processing
 
 Although post processing is an exceptional case for a generator, it is sometimes very useful. Post processing directly operates on the 'testcaseData' object. It will not return any data.
 
@@ -62,7 +62,7 @@ of these 'postProcessTodo' objects beforehand.
   - (mandatory) The name of the generator to be called. So it's possible that one generator creates
     a postProcessTodo for another generator.
 
-## Generator Constructor
+### Generator Constructor
 
 | key             | description                                                                                                                                                                                                       |
 | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
@@ -83,7 +83,7 @@ options when creating a generator
 
 additional properties
 
-# Generator Interface
+## Generator Interface
 
   - async loadStore()  
     (Not implemented) This function should load the store of the generator.
@@ -110,7 +110,7 @@ additional properties
   - async postProcess(instanceId, testcase, todoGenerator)  
     (Not implemented) Executes the post process.
 
-# Generator Base
+## Generator Base
 
 The base implementation of the interface in 'DataGeneratorBase.js' adds the load and
 save store function. It Also handles the use of the instanceId.

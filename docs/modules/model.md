@@ -7,17 +7,17 @@ sidebar_label: Model
 
 This Package is the basis for the table models and test cases
 
-# TableInterface
+## TableInterface
 
 The TableInterface describes the basic Interface for the table.
 This is common for all the tables, such as decision tables or the matrix tables.
 
-## Properties
+### Properties
 
   - tableType  
     Returns the type of the table
 
-## Functions
+### Functions
 
 ``` js
 /**
@@ -47,27 +47,27 @@ getTestcaseForName(testcaseName) {}
 processRanges(testcaseName) {}
 ```
 
-# Todos
+## Todos
 
 Todos defines what is needed to create the test cases.
 Each generator cmd or each reference creates a 'todo'.
 There are different types of todos.
 
-# TodoStatic
+## TodoStatic
 
 All the values from the generator column which are NOT a special cmd (like 'gen' for generator)
 are taken as static values. These data will be directly written to the result data.
 
-## Properties
+### Properties
 
   - value  
     The static data
 
-# TodoMeta
+## TodoMeta
 
 The meta data of a test case. This data depends on the kind of table.
 
-## Properties
+### Properties
 
   - fieldName  
     The name of the field in the table.
@@ -84,11 +84,11 @@ The meta data of a test case. This data depends on the kind of table.
   - meta  
     The meta data itself. Depends from which table the data comes from.
 
-# TodoGenerator
+## TodoGenerator
 
 Each todo is a call to the generator.
 
-## Properties
+### Properties
 
   - generatorName  
     The name of the generator to call. This is the name the generator was registered in the
@@ -108,11 +108,11 @@ Each todo is a call to the generator.
     number. This way, the user can define an execution order for the generators. The default
     order number is '1000'.
 
-# TodoReference
+## TodoReference
 
 For each reference, a TodoReference is created.
 
-## Properties
+### Properties
 
   - targetTableName  
     The table name of the target table.
