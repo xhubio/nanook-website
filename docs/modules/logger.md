@@ -5,8 +5,7 @@ sidebar_label: Logger
 ---
 
 
-This is a logger facade. It stores all the log entries in Memory.
-This is very useful for testing but not for production.
+This is a logging facade. It stores all the log entries in Memory. This is very useful for testing but not for production.
 
 It has the following methods:
 
@@ -29,12 +28,11 @@ fatal(arg)
 
 # LoggerInterface
 
-This is the interface each logger must implement to
-be used in xhaubiotable.
+This is the interface each logger must implement to be used in xhubiotable.
 
 The following loglevels exists:
 
-**loglevel names and the level number.**
+**Loglevel names and their level number.**
 
 ``` js
 {
@@ -99,8 +97,8 @@ async fatal(message) {}
 # LoggerMemory
 
 This logger is mainly used for unit testing. It stores
-all the logs in array by level type. So you can get the Logs
-after the test and proof that the right logs where generated.
+all the logs in an array by level type. This way, you can get the logs
+after the test along with proof that the right logs where generated.
 
 ## Properties
 
@@ -121,7 +119,7 @@ async clear() {}
 
 ## Retrieve the logs
 
-To get all the logs read the property 'logger.entries'. This returns an hash where for each logLevel
+To get all the logs read the property 'logger.entries'. This returns a hash where for each logLevel
 the logs are stored.
 
 ``` js

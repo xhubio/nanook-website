@@ -5,8 +5,8 @@ sidebar_label: Writer
 ---
 
 
-The writer is responsible to export the generated data in the format needed.
-Best practice is to create one writer for each format or kind of data.
+The writer is responsible for exporting the generated data in the required format.
+It is best practice to create one writer for each format or type.
 
 ## Constructor
 
@@ -49,8 +49,7 @@ async after() {
 ## write
 
 This is the method doing the work. It will be called for each test case.
-It will get the test case data object which contains all then generated
-data for one test case.
+It will get the test case data object which contains all the data generated for one test case.
 
 It is up to the writer to extract the needed.
 

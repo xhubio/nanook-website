@@ -5,12 +5,12 @@ sidebar_label: Model
 ---
 
 
-This Package is the base for the table models and test cases
+This Package is the basis for the table models and test cases
 
 # TableInterface
 
 The TableInterface describes the basic Interface for the table.
-This is common for all the tables like decision tables or the matrix tables.
+This is common for all the tables, such as decision tables or the matrix tables.
 
 ## Properties
 
@@ -49,8 +49,8 @@ processRanges(testcaseName) {}
 
 # Todos
 
-The Todos defines what is needed to create the test cases.
-Each Generator cmd or each reference creates a 'todo'.
+Todos defines what is needed to create the test cases.
+Each generator cmd or each reference creates a 'todo'.
 There are different types of todos.
 
 # TodoStatic
@@ -65,24 +65,24 @@ are taken as static values. These data will be directly written to the result da
 
 # TodoMeta
 
-The meta data of a test case. These data depends on the kind of table.
+The meta data of a test case. This data depends on the kind of table.
 
 ## Properties
 
   - fieldName  
-    The name of the field in the table
+    The name of the field in the table.
 
   - tableName  
-    The table this todo comes from
+    The table this todo comes from.
 
   - tableType  
-    The table type of the table this todo comes from
+    The table type of the table this todo comes from.
 
   - testcaseName  
-    The name of the test case this todo comes from
+    The name of the test case this todo comes from.
 
   - meta  
-    The meta data itself. Depends from which table the data comes from
+    The meta data itself. Depends from which table the data comes from.
 
 # TodoGenerator
 
@@ -95,33 +95,33 @@ Each todo is a call to the generator.
     generator registry
 
   - config  
-    The parameters for calling the generator
+    The parameters for calling the generator.
 
   - tableType  
-    The table type of the table this todo comes from
+    The table type of the table this todo comes from.
 
   - instanceIdSuffix  
-    A suffix for the current instance id
+    A suffix for the current instanceId.
 
   - order  
-    The order number. Before the generator todos are executed they are sorted by this
-    number. So the user can define an execution order for the generators. The default
+    The order number. Before the generator todos are executed, they are sorted by this
+    number. This way, the user can define an execution order for the generators. The default
     order number is '1000'.
 
 # TodoReference
 
-For each reference a TodoReference is created.
+For each reference, a TodoReference is created.
 
 ## Properties
 
   - targetTableName  
-    The table name of the target table
+    The table name of the target table.
 
   - targetFieldName  
-    The name of the field in the target table
+    The name of the field in the target table.
 
   - targetTestcaseName  
-    The name of the test case in the target table
+    The name of the test case in the target table.
 
   - instanceIdSuffix  
-    A suffix for the current instance id
+    A suffix for the current instanceId.

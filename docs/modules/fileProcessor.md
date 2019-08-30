@@ -5,16 +5,15 @@ sidebar_label: File Processor
 ---
 
 
-The file processor works on the data imported by an importer to
-create a table model.
-For the file processor it is transparent which importer was used.
+The file processor works on the data imported by an importer to create a table model.
+For the file processor, it is transparent which importer was used.
 The importer must implement the importer interface.
 
 # ImporterInterface
 
-The importer is responsible to load data from a spreadsheet. This interface must be implemented
-to use custom importer. The Importer is used by a parser to read the files and create the table model.
-The importer does not care about the content of the spreadsheet. It is just an abstract spreadsheet reader.
+The importer is responsible for loading data from a spreadsheet. This interface must be implemented
+to use the custom importer. The Importer is used by a parser to read the files and create the table model.
+The importer does not care about the content of the spreadsheet - it's just an abstract spreadsheet reader.
 
 ## Functions
 
@@ -55,7 +54,7 @@ clear() {}
 
 # ParserInterface
 
-For each table type a specific parser is needed. All the Parser
+For each table type, a specific parser is needed. All parsers
 must implement this interface.
 
 ## Functions
