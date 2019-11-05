@@ -379,7 +379,7 @@
     body {
         color                   : #233659;
         color:#0d122b;
-        font-family             : Montserrat,sans-serif;
+        font-family             : "Panton-Regular",Helvetica,Arial,sans-serif;
         font-size               : 16px;
         line-height             : 1.5;
         -ms-text-size-adjust    : 100%;
@@ -792,12 +792,8 @@ blockquote {
 
 .homeContainer .homeWrapper .wrapper {
     margin   : 0 auto;
-    max-width: 900px;
+    max-width: 500px;
     padding  : 0 0px 
-}
-
-.homeContainer .homeWrapper .projectLogo img {    
-    opacity: 0.1;
 }
 
 .homeContainer .homeWrapper #project_title {
@@ -814,14 +810,10 @@ blockquote {
     line-height   : 1em
 }
 
-.projectLogo {
-    display       : none;
-    pointer-events: none
-}
-
-.projectLogo img {
+.projectLogo2 img {
+    margin-top: 45px;
+    height: 100%;
     width: 100%;
-    height: 100%;    
 }
 
 .projectIntro {
@@ -851,7 +843,7 @@ blockquote {
     line-height: .5em;
     color: #fff;
     opacity: 0.9;
-    margin-top: 200px;
+    margin-top: 20px;
     text-size-adjust: 100%
 }
 
@@ -886,6 +878,12 @@ blockquote {
         line-height: 80px;
     }
 
+    .projectLogo2 img {
+        margin-top: 25px;
+        height: 95%;
+        width: 95%;
+    }
+
     .homeContainer .homeWrapper {
         padding-left : 10px;
         padding-right: 10px;
@@ -898,6 +896,13 @@ blockquote {
         font-size: 100px;
         font-stretch: 100%;
         line-height: 100px;
+        margin-top: -50px;
+    }
+
+    .projectLogo2 img {
+        margin-top: 45px;
+        height: 70%;
+        width: 70%;
     }
 
     .homeContainer .homeWrapper {
@@ -912,12 +917,63 @@ blockquote {
 }
 
 @media only screen and (min-width:1200px) {
+    .projectTitle2 {
+        font-size: 100px;
+        font-stretch: 100%;
+        line-height: 100px;
+        margin-top: -20px;
+    }
+
+    .projectLogo2 img {
+        margin-top: 45px;
+        height: 55%;
+        width: 55%;
+    }
+
     .homeContainer .homeWrapper #inner {
         max-width: 750px
     }
 }
 
 @media only screen and (min-width:1500px) {
+    .projectTitle2 {
+        font-size: 100px;
+        font-stretch: 100%;
+        line-height: 100px;
+        margin-top: -20px;
+    }
+
+    .projectLogo2 img {
+        margin-top: 45px;
+        height: 40%;
+        width: 40%;
+    }
+
+    .homeContainer .homeWrapper #inner {
+        max-width     : 1100px;
+        padding-bottom: 40px;
+        padding-top   : 40px
+    }
+
+    .wrapper {
+        max-width: 1400px
+    }
+}
+
+@media only screen and (min-width:3000px) {
+    .projectTitle2 {
+        font-size: 100px;
+        font-stretch: 100%;
+        line-height: 100px;
+        margin-top: -20px;
+    }
+
+    .projectLogo2 img {
+        margin-top: 45px;
+        height: 30%;
+        width: 30%;
+    }
+
     .homeContainer .homeWrapper #inner {
         max-width     : 1100px;
         padding-bottom: 40px;

@@ -42,21 +42,22 @@ class HomeSplash extends React.Component {
 
     const SplashContainer = props => (
       <div className="homeContainer">
+        <Logo img_src={`${baseUrl}img/arch.svg`} />
         <div className="homeSplashFade">
-          <div className="wrapper homeWrapper"><Logo img_src={`${baseUrl}img/nanook.svg`} />{props.children}</div>
+          <div className="wrapper homeWrapper">{props.children}</div>
         </div>
       </div>
     );
 
     const Logo = props => (
-      <div className="projectLogo">
+      <div className="projectLogo2">
         <img src={props.img_src} alt="Nanook logo" />
       </div>
     );
 
     const ProjectTitle = () => (
-      <h2 className="projectTitle2">
-        {siteConfig.title}
+      <h2 className="projectTitle2">        
+                
       </h2>
     );
 
@@ -217,7 +218,7 @@ class Index extends React.Component {
 
     return (
       <div>
-        <HomeSplash siteConfig={siteConfig} language={language} />
+        <HomeSplash siteConfig={siteConfig} language={language} />        
         <div className="mainContainer">
           <Features />
         </div>

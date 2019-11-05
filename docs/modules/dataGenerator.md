@@ -32,7 +32,7 @@ After the processor has finished executing all the test cases, the 'saveStore' f
 The idea behind the 'instanceId' is to create an ID for each instance of generated data. So if the generator is called twice with the same instanceId it will return the same data. The instanceId is created by the processor for each test case.
 
   - Example  
-    Let's say we have a test case where the generator should create a password, but the password needs to be entered in two separete fields - 'Password' and 'Password repeat'. This is common each time a user needs to reset the password. Thus, in the equivalence class table the generator is called twice with the same instanceId. Then the generator should return the same data. This is explained in more detail  the tutorial.
+    Let's say we have a test case where the generator should create a password, but the password needs to be entered in two separete fields - 'Password' and 'Password repeat'. This is common each time a user needs to reset the password. Thus, in the equivalence class table the generator is called twice with the same instanceId. Then the generator should return the same data. This is explained in more detail the tutorial.
 
 ### Post processing
 
